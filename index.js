@@ -1,3 +1,10 @@
+const NavBar = () => {
+  return (
+  <>
+    NavBar
+  </>);
+}
+
 const MainBody = () => {
   return (
     <p>I'm the main body</p>
@@ -5,9 +12,9 @@ const MainBody = () => {
 }
 
 ReactDOM.render(
-  <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-  </ul>,
+  <div>
+    <NavBar />
+    <MainBody />
+  </div>,
   document.getElementById('root')
 );
