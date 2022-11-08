@@ -3,6 +3,7 @@ import React from 'react'
 function Page() {
   return (
     <>
+      <h1>Reason's I like React</h1>
       <ol>
         <li>Potential to work remote</li>
         <li>Well paid profession</li>

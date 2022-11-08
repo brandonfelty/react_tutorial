@@ -5,7 +5,6 @@ function Header() {
   return (
     <div>
       <Nav />
-      <h1>Reason's I like React</h1>
     </div>
   )
 };
