@@ -1,0 +1,22 @@
+.nav-container {
+  display: flex;
+  background-color: rgb(21, 21, 21);
+  color: rgb(193, 193, 193);
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.img-logo {
+  width: 40px;
+  height: 40px;
+  margin: 0.5rem;
+}
+
+.nav-container h3 {
+  margin-right: auto;
+  color: rgb(0, 188, 205);
+}
+
+.nav-container h4 {
+  margin-right: 0.4rem;
+}
