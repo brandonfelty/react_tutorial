@@ -1,0 +1,17 @@
+.page-list {
+  background-size: 20px;
+}
+
+.page-list li {
+  padding-top: 5px;
+}
+
+.page-title {
+  padding-top: 1.5rem;
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

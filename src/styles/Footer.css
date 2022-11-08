@@ -2,4 +2,13 @@
   font-size: small;
   position: absolute;
   bottom: 1rem;
+  background-color: lightslategrey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: x-small;
+  color: white;
 }
