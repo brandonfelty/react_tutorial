@@ -3,6 +3,22 @@
   color: white;
 }
 
+.main-container::after {
+  content: "";
+  background: url('../react.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position-x: 80vh;
+  opacity: 0.8;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
 .main-title {
   margin-top: 0;
   padding-top: 2rem;
@@ -10,4 +26,9 @@
 
 .fact-list > li {
   margin-bottom: 9px;
+}
+
+.fact-list > li::marker {
+  color: aqua;
+  font-size: 1.4rem;
 }
