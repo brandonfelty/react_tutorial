@@ -30,6 +30,5 @@
 }
 
 .summary .headshot {
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
 }

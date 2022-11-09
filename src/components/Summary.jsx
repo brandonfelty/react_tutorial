@@ -11,8 +11,8 @@ const Summary = () => {
       <h4>Frontend Developer</h4>
       <p>Calgary, AB</p>
       <div className='summary-contact'>
-        <Button />
-        <Button />
+        <Button type='email' />
+        <Button type='linkedin' />
       </div>
     </div>
   )

@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Button.css';
 
-const Button = () => {
+const Button = ({ type }) => {
   return (
-    <div>Button</div>
+    <button type='button' className={type}>
+      {type === 'email' && <i className="fa-solid fa-envelope"></i>} 
+      {type === 'linkedin' && <i class="fa-brands fa-linkedin"></i>} 
+      {type}
+    </button>
   )
 }
 

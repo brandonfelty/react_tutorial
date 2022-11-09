@@ -1,0 +1,17 @@
+i {
+  margin-right: 4px;
+}
+
+button {
+  border-radius: 10px;
+  height: 25px;
+}
+
+.linkedin {
+  background-color: rgb(43, 170, 255);
+  color: rgb(237, 237, 237);
+}
+
+.email i {
+  color: rgba(255, 0, 0, 0.629);
+}
