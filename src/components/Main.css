@@ -6,10 +6,10 @@
 .main-container::after {
   content: "";
   background: url('../react.png');
-  background-size: 80%;
+  background-size: 400px;
   background-repeat: no-repeat;
-  background-position-x: 80vh;
-  opacity: 0.8;
+  background-position-x: 325px;
+  background-position-y: 30px;
   opacity: 0.3;
   top: 0;
   left: 0;
