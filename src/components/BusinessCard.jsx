@@ -3,12 +3,12 @@ import Summary from './Summary';
 import About from './About';
 import Interests from './Interests';
 import Footer from './Footer';
+import './BusinessCard.css';
 
 
-
-const Info = () => {
+const BusinessCard = () => {
   return (
-    <div className='business-card'>
+    <div className='business-card-container'>
       <Summary />
       <About />
       <Interests />
@@ -17,4 +17,4 @@ const Info = () => {
   )
 }
 
-export default Info
+export default BusinessCard;

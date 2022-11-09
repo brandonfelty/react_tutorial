@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import ReactFacts from "./components/ReactFacts";
-import Info from "./components/Info";
+import BusinessCard from "./components/BusinessCard";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<ReactFacts />} />
-          <Route path="/info" element={<Info />} />
+          <Route path="/info" element={<BusinessCard />} />
         </Routes>
       </div>
     </Router>

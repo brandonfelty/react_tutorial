@@ -1,0 +1,7 @@
+.business-card-container {
+  margin: 20px auto;
+  width: 50%;
+  background-color: rgb(26, 26, 26);
+  border-radius: 10px;
+  color: rgb(199, 199, 199);
+}
