@@ -9,7 +9,7 @@ const Button = ({ type }) => {
         className={type}
       >
         {type === 'email' && <i className="fa-solid fa-envelope"></i>} 
-        {type === 'linkedin' && <i class="fa-brands fa-linkedin"></i>} 
+        {type === 'linkedin' && <i className="fa-brands fa-linkedin"></i>} 
         {type}
       </button>
   </form>
