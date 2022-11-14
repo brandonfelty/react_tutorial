@@ -1,8 +1,11 @@
 import React from 'react'
+import NavBar from '../components/NavBar';
 
 const AirBNB = () => {
   return (
-    <div>AirBNB</div>
+    <div className='airbnb'>
+      <NavBar title='AirBnB' subtitle="" />
+    </div>
   )
 }
 
