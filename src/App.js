@@ -4,8 +4,9 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import ReactFacts from "./components/ReactFacts";
-import BusinessCard from "./components/BusinessCard";
+import ReactFacts from "./pages/ReactFacts";
+import BusinessCard from "./pages/BusinessCard";
+import AirBNB from "./pages/AirBNB";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ReactFacts />} />
           <Route path="/info" element={<BusinessCard />} />
+          <Route path="/airbnb" element={<AirBNB />} />
         </Routes>
       </div>
     </Router>
