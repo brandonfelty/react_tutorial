@@ -8,6 +8,7 @@ const NavBar = () => {
       <img alt='react-logo' src={reactLogo} className='img-logo'/>
       <h3>ReactFacts</h3>
       <h4>React Course - Project 1</h4>
+      <a href='/info'> Business Card</a>
     </nav>
   )
 }
