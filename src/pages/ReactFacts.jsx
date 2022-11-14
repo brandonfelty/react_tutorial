@@ -5,7 +5,7 @@ import Main from "../components/Main";
 const ReactFacts = () => {
   return (
     <>
-      <NavBar />
+      <NavBar title='React' />
       <Main />
       <a href='/airbnb'>AirBNB</a>
     </>
