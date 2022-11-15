@@ -3,10 +3,10 @@ import reactLogo from '../react.png';
 import airbnbLogo from '../airbnb.png';
 import './NavBar.css';
 
-const NavBar = ({ title, subtitle }) => {
+const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
-  if (title === 'React') logo = reactLogo;
-  if (title === 'AirBnB') logo = airbnbLogo;
+  if (pic === 'react') logo = reactLogo;
+  if (pic === 'airbnb') logo = airbnbLogo;
 
   return (
     <nav className='nav-container'>

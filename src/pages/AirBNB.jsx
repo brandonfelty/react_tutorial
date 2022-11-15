@@ -4,9 +4,9 @@ import NavBar from '../components/NavBar';
 const AirBNB = () => {
   return (
     <div className='airbnb'>
-      <NavBar title='AirBnB' subtitle="" />
+      <NavBar pic='airbnb' title='' subtitle="" />
     </div>
   )
 }
 
-export default AirBNB
+export default AirBNB;
