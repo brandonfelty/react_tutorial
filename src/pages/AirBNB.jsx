@@ -10,7 +10,9 @@ const AirBNB = () => {
     <div className='airbnb'>
       <NavBar pic='airbnb' title='' subtitle="" />
       <Hero />
-      <Card />
+      <div className='cards'>
+        <Card />
+      </div>
     </div>
   )
 }

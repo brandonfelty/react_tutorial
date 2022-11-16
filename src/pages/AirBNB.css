@@ -2,3 +2,9 @@
   border-bottom-width: 3px;
   border-color: brown;
 }
+
+.cards {
+  display: flex;
+  margin-left: 20px;
+  padding-right: 10px;
+}
