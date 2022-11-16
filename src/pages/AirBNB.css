@@ -1,4 +1,4 @@
-#airbnb-page {
-  z-index: 7;
-  background-color: #fff;
+.airbnb {
+  border-bottom-width: 3px;
+  border-color: brown;
 }

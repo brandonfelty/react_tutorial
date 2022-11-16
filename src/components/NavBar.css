@@ -4,6 +4,8 @@
   color: rgb(193, 193, 193);
   align-items: center;
   padding: 0.5rem;
+  border: 2px;
+  box-shadow: 0px 3px 7px rgb(0,0,0,0.1);
 }
 
 .img-logo {
