@@ -4,7 +4,7 @@ import './AirBNB.css';
 
 const AirBNB = () => {
   return (
-    <div className='airbnb'>
+    <div className='airbnb' id='airbnb-page'>
       <NavBar pic='airbnb' title='' subtitle="" />
     </div>
   )
