@@ -5,10 +5,10 @@ import './Card.css';
 const Card = () => {
   return (
     <div className='card'>
-      <img src={background} alt='card'/>
-      <p>
+      <img src={background} alt='card' className='cover'/>
+      <p className='rating'>
         5
-        <i className="fa-solid fa-star"></i>
+        <i className="fa-solid fa-star rating-star"></i>
          (3) - USA
       </p>
       <p>Our lady palm with Katie Zolang</p>

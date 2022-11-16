@@ -1,3 +1,19 @@
 .rate {
   display: flex;
 }
+
+.rate > p {
+  margin-top: 0;
+}
+
+.cover {
+  border-radius: 10px;
+}
+
+.rating-star {
+  color: rgb(230, 50, 50);
+}
+
+.rating {
+  color: grey
+}
