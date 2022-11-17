@@ -5,7 +5,7 @@
 
 .main-container::after {
   content: "";
-  background: url('../react.png');
+  background: url('../images/react.png');
   background-size: 400px;
   background-repeat: no-repeat;
   background-position-x: 325px;

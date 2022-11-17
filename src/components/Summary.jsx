@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import headshot from '../p_b.png'
+import headshot from '../images/p_b.png'
 import './Summary.css';
 
 const Summary = () => {

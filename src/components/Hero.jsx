@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import collage from '../collage.png';
+import collage from '../images/collage.png';
 
 const Hero = () => {
   return (

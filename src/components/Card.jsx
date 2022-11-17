@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../palm Small.png';
+import background from '../images/palm Small.png';
 import './Card.css';
 
 const Card = () => {

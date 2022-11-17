@@ -1,6 +1,6 @@
 import React from 'react';
-import reactLogo from '../react.png';
-import airbnbLogo from '../airbnb.png';
+import reactLogo from '../images/react.png';
+import airbnbLogo from '../images/airbnb.png';
 import './NavBar.css';
 
 const NavBar = ({ title, subtitle, pic }) => {
