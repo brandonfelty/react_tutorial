@@ -14,7 +14,7 @@ const Card = () => {
       <p>Our lady palm with Katie Zolang</p>
       <div className='rate'>
         <p className='cost'>
-          $136
+          $136&#160;
         </p>
         <p> / person</p>
       </div>
