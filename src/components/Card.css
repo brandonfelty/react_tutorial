@@ -21,3 +21,11 @@
 .cost {
   font-weight: 700;
 }
+
+.card-container {
+  display: flex;
+}
+
+.card {
+  padding-right: 15px;
+}
