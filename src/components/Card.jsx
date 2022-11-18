@@ -13,7 +13,7 @@ const Card = () => {
         <i className="fa-solid fa-star rating-star"></i>
          ({card.rating.amount}) - {card.rating.location}
       </p>
-      <p>Our lady palm with Katie Zolang</p>
+      <p>{card.title}</p>
       <div className='rate'>
         <p className='cost'>
           From ${card.cost}&#160;
