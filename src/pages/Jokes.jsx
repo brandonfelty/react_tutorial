@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Joke from '../components/Joke';
 
 const Jokes = () => {
-  const colors = ['Red', 'Orange', 'Green', 'Yellow', 'Blue', 'Violet', 'Indigo'];
+  
   return (
     <div>
-      {colors.map((color) => (
-        <h3>{color}</h3>
-      ))}
+      <Joke />
     </div>
   )
 }
