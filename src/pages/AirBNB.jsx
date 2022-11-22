@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
-import Card from '../components/Card';
+import Cards from '../components/Cards';
 
 import './AirBNB.css';
 
@@ -11,7 +11,7 @@ const AirBNB = () => {
       <NavBar pic='airbnb' title='' subtitle="" />
       <Hero />
       <div className='cards'>
-        <Card />
+        <Cards />
       </div>
     </div>
   )
