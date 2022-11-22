@@ -7,6 +7,7 @@ import {
 import ReactFacts from "./pages/ReactFacts";
 import BusinessCard from "./pages/BusinessCard";
 import AirBNB from "./pages/AirBNB";
+import Jokes from "./pages/Jokes";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<ReactFacts />} />
           <Route path="/info" element={<BusinessCard />} />
           <Route path="/airbnb" element={<AirBNB />} />
+          <Route path='/jokes' element={<Jokes />} />
         </Routes>
       </div>
     </Router>
