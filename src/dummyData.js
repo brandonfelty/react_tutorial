@@ -37,3 +37,26 @@ export const expData = [
     cost: 169
   },
 ];
+
+export const jokeData = [
+  {
+    setup: 'setup1',
+    punchline: 'punchline1'
+  },
+  {
+    setup: 'setup2',
+    punchline: 'punchline2'
+  },
+  {
+    setup: 'setup3',
+    punchline: 'punchline3'
+  },
+  {
+    setup: 'setup4',
+    punchline: 'punchline4'
+  },
+  {
+    setup: 'setup5',
+    punchline: 'punchline5'
+  },
+]
