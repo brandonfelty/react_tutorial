@@ -41,3 +41,12 @@
 .card {
   padding-right: 15px;
 }
+
+.badge-text {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background-color: aliceblue;
+  padding: 2px;
+  font-weight: bold;
+}
