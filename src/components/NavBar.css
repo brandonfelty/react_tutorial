@@ -8,6 +8,21 @@
   box-shadow: 0px 3px 7px rgb(0,0,0,0.1);
 }
 
+.nav-travel {
+  margin: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(252, 118, 118);
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.nav-travel > a {
+  display: none;
+}
+
 .img-logo {
   width: 40px;
   height: 40px;

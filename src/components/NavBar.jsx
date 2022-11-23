@@ -12,7 +12,7 @@ const NavBar = ({ title, subtitle, pic }) => {
 
 
   return (
-    <nav className='nav-container'>
+    <nav className={pic === 'umbrella' ? 'nav-travel': 'nav-container' }>
       {!umbrella ? <img 
         alt='react-logo' 
         src={logo} 
