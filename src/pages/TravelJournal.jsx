@@ -7,12 +7,14 @@ const TravelJournal = () => {
   return (
     <div>
       <NavBar title='My Travel Journal' pic='umbrella'/>
-      {travelJournalData.map((travelItem, index) => (
-        <Entry 
-          key={index}
-          travelItem={travelItem}
-        />
-      ))}
+      <div className='travel-container'>
+        {travelJournalData.map((travelItem, index) => (
+          <Entry 
+            key={index}
+            travelItem={travelItem}
+          />
+        ))}
+      </div>
     </div>
   )
 }

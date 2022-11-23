@@ -8,7 +8,7 @@ const NavBar = ({ title, subtitle, pic }) => {
   if (pic === 'react') logo = reactLogo;
   if (pic === 'airbnb') logo = airbnbLogo;
   let umbrella;
-  if (pic === 'umbrella') umbrella = <i class="fa-solid fa-umbrella"></i>;
+  if (pic === 'umbrella') umbrella = <i className="fa-solid fa-umbrella"></i>;
 
 
   return (
