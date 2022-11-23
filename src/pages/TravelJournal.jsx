@@ -1,8 +1,13 @@
 import React from 'react'
+import NavBar from '../components/NavBar';
+import Entry from '../components/Entry';
 
 const TravelJournal = () => {
   return (
-    <div>TravelJournal</div>
+    <div>
+      <NavBar />
+      <Entry />
+    </div>
   )
 }
 
