@@ -27,8 +27,8 @@ export const expData = [
     },
     title: 'Run Forest Run!',
     cost: 170,
-    openSpots: 0,
-    fire: true,
+    openSpots: 5,
+    fire: false,
   },{
     img: elk,
     rating: 
