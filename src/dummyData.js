@@ -13,7 +13,8 @@ export const expData = [
       location: 'USA'  
     },
     title: 'Our lady palm with Andy Zolang',
-    cost: 136
+    cost: 136,
+    openSpots: 0
   },
   {
     img: forest,
@@ -24,7 +25,8 @@ export const expData = [
       location: 'CAN'  
     },
     title: 'Run Forest Run!',
-    cost: 170
+    cost: 170,
+    openSpots: 0
   },{
     img: elk,
     rating: 
@@ -34,7 +36,8 @@ export const expData = [
       location: 'USA'  
     },
     title: 'Do you elk what I elk?',
-    cost: 169
+    cost: 169,
+    openSpots: 0
   },
 ];
 
