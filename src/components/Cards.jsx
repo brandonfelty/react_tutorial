@@ -9,7 +9,7 @@ const Cards = () => {
       { expData.map((card, index) => (
         <Card 
           key={index} 
-          card={card}
+          {...card}
         />
       ))}
     </div>

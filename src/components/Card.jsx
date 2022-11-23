@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Card = ({ card }) => {
+const Card = ( props ) => {
   let badgeText;
-  if (card.openSpots === 0 && !card.fire) {
+  if (props.openSpots === 0 && !props.fire) {
     badgeText = 'SOLD OUT'
-  } else if (card.fire) {
+  } else if (props.fire) {
     badgeText = 'THIS IS FIRE'
   } else {
     badgeText = '';
@@ -13,19 +13,19 @@ const Card = ({ card }) => {
   return (
     <div className='card'>
       <div className='img-container'>
-        {card.fire && <i className="fa-solid fa-fire"></i>}
+        {props.fire && <i className="fa-solid fa-fire"></i>}
         <div className='badge-text'>{badgeText}</div>
-        <img src={card.img} alt='card' className='cover'/>
+        <img src={props.img} alt='card' className='cover'/>
       </div>
       <p className='rating'>
-        {card.rating.stars}
+        {props.rating.stars}
         <i className="fa-solid fa-star rating-star"></i>
-        ({card.rating.amount}) - {card.rating.location}
+        ({props.rating.amount}) - {props.rating.location}
       </p>
-      <p>{card.title}</p>
+      <p>{props.title}</p>
       <div className='rate'>
         <p className='cost'>
-          From ${card.cost}&#160;
+          From ${props.cost}&#160;
         </p>
         <p> / person</p>
       </div>
