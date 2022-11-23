@@ -7,14 +7,18 @@ const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
   if (pic === 'react') logo = reactLogo;
   if (pic === 'airbnb') logo = airbnbLogo;
+  let umbrella;
+  if (pic === 'umbrella') umbrella = <i class="fa-solid fa-umbrella"></i>;
+
 
   return (
     <nav className='nav-container'>
-      <img 
+      {!umbrella ? <img 
         alt='react-logo' 
         src={logo} 
         className='img-logo'
-      />
+      /> :
+      umbrella}
       <h3>{title}</h3>
       <h4>{subtitle}</h4>
       <a href='/info'> Business Card</a>

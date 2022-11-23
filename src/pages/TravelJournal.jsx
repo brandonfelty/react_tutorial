@@ -5,7 +5,7 @@ import Entry from '../components/Entry';
 const TravelJournal = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar title='My Travel Journal' pic='umbrella'/>
       <Entry />
     </div>
   )
