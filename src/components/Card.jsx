@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Card = ({ card }) => {
+
   return (
     <div className='card'>
-      <img src={card.img} alt='card' className='cover'/>
+      <div className='img-container'>
+        {card.fire && <i className="fa-solid fa-fire"></i>}
+        <img src={card.img} alt='card' className='cover'/>
+      </div>
       <p className='rating'>
         {card.rating.stars}
         <i className="fa-solid fa-star rating-star"></i>

@@ -6,6 +6,17 @@
   margin-top: 0;
 }
 
+.fa-fire {
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.img-container {
+  position: relative;
+}
+
 .cover {
   border-radius: 10px;
   width: 100%;
