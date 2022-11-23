@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Joke = () => {
+const Joke = (props) => {
   return (
-    <div>Joke</div>
+    <div>
+      <h1>Setup: {props.setup}</h1>
+      <h3>PunchLine: {props.punchline}</h3>
+    </div>
   )
 }
 
