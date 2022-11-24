@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Meme from '../components/Meme';
 
 const MemeGenerator = () => {
   return (
@@ -9,6 +10,7 @@ const MemeGenerator = () => {
         subtitle='React Course - Project 3'
         pic='meme-logo'
       />
+      <Meme />
     </div>
   )
 };
