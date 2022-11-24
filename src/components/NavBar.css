@@ -49,7 +49,7 @@
 .nav-meme {
   display: flex;
   padding: 15px 20px 8px 50px;
-  background: linear-gradient( 45deg, rgb(129, 0, 116), rgb(248, 117, 255));
+  background: linear-gradient( 45deg, rgb(96, 1, 87), rgb(242, 60, 251));
   color:#fff;
 }
 
@@ -64,4 +64,5 @@ path#path2403 {
 .nav-meme > h4 {
   margin-right: 50px; 
   margin-left: auto;
+  color: rgb(209, 193, 174);
 }
