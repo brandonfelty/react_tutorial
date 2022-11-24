@@ -5,6 +5,7 @@ const MemeLogo = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width={649.389}
     height={605.7}
+    
     id="svg3701"
     {...props}
   >

@@ -40,3 +40,28 @@
 .nav-container h4 {
   margin-right: 0.4rem;
 }
+
+.meme-logo {
+  zoom: 0.1;
+  margin: 0 20px 0 250px;
+}
+
+.nav-meme {
+  display: flex;
+  padding: 15px 20px 8px 50px;
+  background: linear-gradient( 45deg, rgb(129, 0, 116), rgb(248, 117, 255));
+  color:#fff;
+}
+
+path#path2403 {
+  fill:rgb(235, 232, 232) !important;
+}
+
+.nav-meme > a { 
+  display: none;
+}
+
+.nav-meme > h4 {
+  margin-right: 50px; 
+  margin-left: auto;
+}

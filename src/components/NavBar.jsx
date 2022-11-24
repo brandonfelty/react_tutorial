@@ -6,20 +6,38 @@ import './NavBar.css';
 
 const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
-  if (pic === 'react') logo = reactLogo;
-  if (pic === 'airbnb') logo = airbnbLogo;
+  let navClass = '';
+  if (pic === 'react') {
+    logo = reactLogo;
+    navClass = 'nav-container';
+  }
+  if (pic === 'airbnb') {
+    logo = airbnbLogo;
+    navClass = 'nav-container';
+  }
   let logoComponent;
-  if (pic === 'umbrella') logoComponent = <i className="fa-solid fa-umbrella"></i>;
-  if (pic === 'meme-logo') logoComponent = <MemeLogo />;
+  if (pic === 'umbrella') {
+    navClass = 'nav-travel';
+    logoComponent = <i className="fa-solid fa-umbrella"></i>;
+  }  
+  if (pic === 'meme-logo') {
+    navClass = 'nav-meme';
+    logoComponent = <MemeLogo />;
+  }
 
   return (
-    <nav className={pic === 'umbrella' ? 'nav-travel': 'nav-container' }>
-      {!logoComponent ? <img 
-        alt='react-logo' 
-        src={logo} 
-        className='img-logo'
-      /> :
-      logoComponent}
+    <nav className={navClass}>
+      {
+        !logoComponent ? 
+        <img 
+          alt='react-logo' 
+          src={logo} 
+          className='img-logo'
+        /> :
+        <div className='meme-logo'>
+          {logoComponent}
+        </div>
+      }
       <h3>{title}</h3>
       <h4>{subtitle}</h4>
       <a href='/info'> Business Card</a>
