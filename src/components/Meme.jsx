@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Meme.css';
 import { memeData } from '../dummyData';
 
@@ -11,6 +11,11 @@ const Meme = () => {
     const randomMemeID = Math.floor(Math.random() * numberOfMemes);
     return memes[randomMemeID];
   };
+
+  useEffect(() => {
+    setRandomMeme(getRandomMeme());
+  }, [])
+
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -37,9 +42,6 @@ const Meme = () => {
         src={randomMeme.url}
         alt="Random Meme"
       />
-      {memes.map(meme => (
-        <p>{meme.name}</p>
-      ))}
     </div>
   )
 }
