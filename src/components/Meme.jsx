@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Meme.css';
+import { memeData } from '../dummyData';
 
 const Meme = () => {
+  const getRandomMeme = () => {
+    const numberOfMemes = memeData.length;
+    const randomMemeID = Math.floor(Math.random() * numberOfMemes);
+    return memeData[randomMemeID];
+  };
+  const [ randomMeme, setRandomMeme ] = useState({});
+
   const handleClick = (e) => {
     e.preventDefault();
-    console.log('I was clicked..')
+    setRandomMeme(getRandomMeme());
+    console.log(randomMeme)
   };
-  const handleMouseOver = (e) => {
-    console.log(e)
-  }
 
   return (
     <div className='meme'>
@@ -20,12 +26,15 @@ const Meme = () => {
         <button 
           type='submit'
           onClick={handleClick}
-          onMouseOver={handleMouseOver}
         >
           <p>Get a new meme image</p>
           <i className="fa-solid fa-image"></i>
         </button>
       </form>
+      <img className='meme-image'
+        src={randomMeme.image}
+        alt="Random Meme"
+      />
     </div>
   )
 }

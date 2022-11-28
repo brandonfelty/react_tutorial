@@ -1,6 +1,7 @@
 .meme {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding: 3rem;
 }
 
@@ -9,6 +10,13 @@
   margin-bottom: 2rem;
   width: 100%;
   justify-content: center;
+}
+
+.meme-image {
+  width: 30rem;
+  align-self: center;
+  margin-top: 2rem;
+  border-radius: 1.5rem;
 }
 
 input {
