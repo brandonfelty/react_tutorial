@@ -3,6 +3,25 @@ import forest from './images/forest Small.png';
 import elk from './images/elk Small.png';
 import branDawg from './images/p_b.png';
 
+export const memeData = [
+    {
+      "ID": 1, 
+      "bottomText": "Good!", 
+      "image": "http://imgflip.com/s/meme/Grumpy-Cat.jpg", 
+      "name": "Grumpy Cat", 
+      "tags": "Tardar Sauce, Tabatha Bundesen, Felis domesticus", 
+      "topText": ""
+    },
+    {
+      "ID": 24, 
+      "bottomText": "", 
+      "image": "https://imgflip.com/s/meme/Good-Guy-Greg.jpg", 
+      "name": "Good Guy Greg", 
+      "tags": "ggg", 
+      "topText": "      "
+    }
+  ]
+
 
 export const travelJournalData = [
   {
