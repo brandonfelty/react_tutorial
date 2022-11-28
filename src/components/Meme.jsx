@@ -3,12 +3,14 @@ import './Meme.css';
 import { memeData } from '../dummyData';
 
 const Meme = () => {
-  const getRandomMeme = () => {
-    const numberOfMemes = memeData.length;
-    const randomMemeID = Math.floor(Math.random() * numberOfMemes);
-    return memeData[randomMemeID];
-  };
+  const memes = memeData.data.memes;
   const [ randomMeme, setRandomMeme ] = useState({});
+
+  const getRandomMeme = () => {
+    const numberOfMemes = memes.length;
+    const randomMemeID = Math.floor(Math.random() * numberOfMemes);
+    return memes[randomMemeID];
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -32,10 +34,10 @@ const Meme = () => {
         </button>
       </form>
       <img className='meme-image'
-        src={randomMeme.image}
+        src={randomMeme.url}
         alt="Random Meme"
       />
-      {memeData.map(meme => (
+      {memes.map(meme => (
         <p>{meme.name}</p>
       ))}
     </div>
