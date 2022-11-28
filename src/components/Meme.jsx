@@ -5,7 +5,11 @@ const Meme = () => {
   const handleClick = (e) => {
     e.preventDefault();
     console.log('I was clicked..')
+  };
+  const handleMouseOver = (e) => {
+    console.log(e)
   }
+
   return (
     <div className='meme'>
       <form>
@@ -16,6 +20,7 @@ const Meme = () => {
         <button 
           type='submit'
           onClick={handleClick}
+          onMouseOver={handleMouseOver}
         >
           <p>Get a new meme image</p>
           <i className="fa-solid fa-image"></i>
