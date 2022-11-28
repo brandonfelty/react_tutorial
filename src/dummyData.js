@@ -5,20 +5,39 @@ import branDawg from './images/p_b.png';
 
 export const memeData = [
   {
-    "ID": 1, 
-    "bottomText": "Good!", 
-    "image": "http://imgflip.com/s/meme/Grumpy-Cat.jpg", 
-    "name": "Grumpy Cat", 
-    "tags": "Tardar Sauce, Tabatha Bundesen, Felis domesticus", 
-    "topText": ""
+    "postLink": "https://redd.it/z70tlp",
+    "subreddit": "memes",
+    "title": "there's been enough crazy things to distract us",
+    "url": "https://i.redd.it/m0isjaqmer2a1.jpg",
+    "nsfw": false,
+    "spoiler": false,
+    "author": "Tiny-Blacksmith6570",
+    "ups": 9185,
+    "preview": [
+    "https://preview.redd.it/m0isjaqmer2a1.jpg?width=108&crop=smart&auto=webp&s=b2d5220dfd86a473e86279a0223aaff63cd155c2",
+    "https://preview.redd.it/m0isjaqmer2a1.jpg?width=216&crop=smart&auto=webp&s=9c0c453c33315f9258dbae9d71353863e832eccb",
+    "https://preview.redd.it/m0isjaqmer2a1.jpg?width=320&crop=smart&auto=webp&s=cef5637af0dfeed34e9ed63755f79ffee8274eac",
+    "https://preview.redd.it/m0isjaqmer2a1.jpg?width=640&crop=smart&auto=webp&s=53e0d52a7f10d27e03f01e5b1a1a165934e70e7a",
+    "https://preview.redd.it/m0isjaqmer2a1.jpg?width=960&crop=smart&auto=webp&s=47627e564c7efc5b3060cdc98ae719e56ad67053",
+    "https://preview.redd.it/m0isjaqmer2a1.jpg?width=1080&crop=smart&auto=webp&s=7b9a55b1e69ec45fed0f7a305ede4f6ba30dcb4c"
+    ]
   },
   {
-    "ID": 24, 
-    "bottomText": "", 
-    "image": "https://imgflip.com/s/meme/Good-Guy-Greg.jpg", 
-    "name": "Good Guy Greg", 
-    "tags": "ggg", 
-    "topText": "      "
+    postLink: "https://redd.it/z5f0wq",
+    subreddit: "me_irl",
+    title: "Me_irl",
+    url: "https://i.redd.it/qjmg4z5fwd2a1.jpg",
+    nsfw: false,
+    spoiler: false,
+    author: "plmonn",
+    ups: 14038,
+    preview: [
+    "https://preview.redd.it/qjmg4z5fwd2a1.jpg?width=108&crop=smart&auto=webp&s=6e159a84fe107089a0f95f8ff7d2f449f61eff66",
+    "https://preview.redd.it/qjmg4z5fwd2a1.jpg?width=216&crop=smart&auto=webp&s=3c2255547a090f49eaeb0ccabb04994a5522eb04",
+    "https://preview.redd.it/qjmg4z5fwd2a1.jpg?width=320&crop=smart&auto=webp&s=25e7eb7164d36e499f0170c67ed1350d5031b8a4",
+    "https://preview.redd.it/qjmg4z5fwd2a1.jpg?width=640&crop=smart&auto=webp&s=f828fd391904bc7ce74e9e6bd17c83d9bd8ebd2f",
+    "https://preview.redd.it/qjmg4z5fwd2a1.jpg?width=960&crop=smart&auto=webp&s=57bd8e64d49ef7ecc022c544beb608a2253503f9"
+    ]
   }
 ]
 
