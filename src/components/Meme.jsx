@@ -35,6 +35,9 @@ const Meme = () => {
         src={randomMeme.image}
         alt="Random Meme"
       />
+      {memeData.map(meme => (
+        <p>{meme.name}</p>
+      ))}
     </div>
   )
 }
