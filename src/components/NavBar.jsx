@@ -7,7 +7,7 @@ import './NavBar.css';
 const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
   let navClass = '';
-  console.log(pic)
+
   if (pic === 'react') {
     logo = reactLogo;
     navClass = 'nav-home';
