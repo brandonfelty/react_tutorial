@@ -12,15 +12,9 @@ const Meme = () => {
     return memes[randomMemeID];
   };
 
-  useEffect(() => {
-    setRandomMeme(getRandomMeme());
-  }, [])
-
-
   const handleClick = (e) => {
     e.preventDefault();
     setRandomMeme(getRandomMeme());
-    console.log(randomMeme)
   };
 
   return (
@@ -34,14 +28,17 @@ const Meme = () => {
           type='submit'
           onClick={handleClick}
         >
-          <p>Get a new meme image</p>
+        <p>Get a new meme</p>
           <i className="fa-solid fa-image"></i>
         </button>
       </form>
-      <img className='meme-image'
-        src={randomMeme.url}
-        alt="Random Meme"
-      />
+      { 
+        randomMeme.url && 
+        <img className='meme-image'
+          src={randomMeme.url}
+          alt="Random Meme"
+        />
+      }
     </div>
   )
 }
