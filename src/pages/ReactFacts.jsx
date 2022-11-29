@@ -7,7 +7,6 @@ const ReactFacts = () => {
     <>
       <NavBar pic='react' title='React' subtitle='Lesson 1 - React Facts'/>
       <Main />
-      <a href='/airbnb'>AirBNB</a>
     </>
   )
 }
