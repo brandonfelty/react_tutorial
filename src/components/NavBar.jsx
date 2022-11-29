@@ -7,9 +7,10 @@ import './NavBar.css';
 const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
   let navClass = '';
+  console.log(pic)
   if (pic === 'react') {
     logo = reactLogo;
-    navClass = 'nav-container';
+    navClass = 'nav-home';
   }
   if (pic === 'airbnb') {
     logo = airbnbLogo;

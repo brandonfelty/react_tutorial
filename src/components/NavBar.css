@@ -66,3 +66,20 @@ path#path2403 {
   margin-left: auto;
   color: rgb(209, 193, 174);
 }
+
+.nav-home {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(113, 111, 111);
+  color: #fff;
+}
+
+.nav-home > a { 
+  display: none;
+}
+
+.nav-home > h4 {
+  margin-right: 50px; 
+  margin-left: auto;
+  color: rgb(209, 193, 174);
+}

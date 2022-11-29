@@ -5,7 +5,7 @@ import Main from "../components/Main";
 const ReactFacts = () => {
   return (
     <>
-      <NavBar pic='react' title='React' />
+      <NavBar pic='react' title='React' subtitle='Lesson 1 - React Facts'/>
       <Main />
       <a href='/airbnb'>AirBNB</a>
     </>
