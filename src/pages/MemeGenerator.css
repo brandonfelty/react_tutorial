@@ -1,0 +1,13 @@
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.state-answer {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 5px;
+}
