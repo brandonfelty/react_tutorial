@@ -4,7 +4,11 @@ import Meme from '../components/Meme';
 import './MemeGenerator.css';
 
 const MemeGenerator = () => {
-  const [isGoingOut, setIsGoingOut] = useState(false);
+  const [thingList, setThingList] = useState(['Thing 1', 'Thing 2']);
+  const addThing = () => {
+    setThingList(prevList => [...prevList, `Thing ${thingList.length + 1}`])
+  };
+  
   return (
     <div className='meme--page'>
       <NavBar 
@@ -13,9 +17,13 @@ const MemeGenerator = () => {
         pic='meme-logo'
       />
       <Meme />
-      <h4>    Do you feel like going out?</h4>
-      <h1>  { isGoingOut ? 'Yes' : 'No' }</h1>
-      <button onClick={() => setIsGoingOut(prev => !prev)}> Do you feel lucky? </button>
+      <h3>  List of Things</h3>
+      <button onClick={addThing}> Add Thing</button>
+      <ol>
+        {thingList.map(thing => (
+          <li> {thing}</li>
+        ))}
+      </ol>
     </div>
   )
 };
