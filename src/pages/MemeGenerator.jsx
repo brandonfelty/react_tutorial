@@ -1,7 +1,8 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Meme from '../components/Meme';
-import './MemeGenerator.css'
+import './MemeGenerator.css';
+import Timer from '../components/Timer';
 
 const MemeGenerator = () => {
 
@@ -13,7 +14,7 @@ const MemeGenerator = () => {
         pic='meme-logo'
       />
       <Meme />
-      
+      <Timer />
     </div>
   )
 };
