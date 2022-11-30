@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Timer.css';
 
 const Timer = () => {
+  const [ count, setCount ] = useState(0);
+
+  const handleClick = (target) => {
+    if (target === 'minus') setCount(prevCount => prevCount - 1);
+    if (target === 'plus') setCount(prevCount => prevCount + 1);
+  }
+
   return (
     <div className='timer--container'>
-      <div className='timer--counter-container minus'>
+      <div onClick={() => handleClick('minus')} className='timer--counter-container minus'>
         <i className="fa-solid fa-minus timer--counter"></i>
       </div>
       <div className='timer--count'>
-        <h1>0</h1>
+        <h1>{count}</h1>
       </div>
-      <div className='timer--counter-container plus'>
+      <div onClick={() => handleClick('plus')} className='timer--counter-container plus'>
         <i className="fa-solid fa-plus timer--counter"></i>
       </div>
     </div>
