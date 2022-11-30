@@ -19,3 +19,34 @@
   top: -7.5rem;
   left: -2rem;
 }
+
+.timer--counter-container {
+  height: 0;
+  width: 0;
+  border: 2rem solid rgb(248, 244, 244);
+  border-radius: 2rem;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.timer--counter-container:hover {
+  border: 2rem solid rgb(178, 178, 178);
+  cursor: pointer;
+}
+
+.plus {
+ position: relative;
+ right: 3rem;
+}
+
+.minus {
+  position: relative;
+  left: 3rem;
+  z-index: 7;
+ }
+
+ .timer--counter {
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+ }
