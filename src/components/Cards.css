@@ -30,6 +30,14 @@
   color: grey
 }
 
+.rating-favourite {
+  color: rgb(255, 149, 0);
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+  zoom: 1.5;
+}
+
 .cost {
   font-weight: 700;
 }
@@ -40,6 +48,7 @@
 
 .card {
   padding-right: 15px;
+  position: relative;
 }
 
 .badge-text {
