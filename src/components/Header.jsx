@@ -5,9 +5,9 @@ const Header = () => {
   const [user, setUser] = React.useState('Brandon');
 
   return (
-    <div className='header'>
+    <header className='header'>
       <p>Current User: {user}</p>
-    </div>
+    </header>
   )
 }
 

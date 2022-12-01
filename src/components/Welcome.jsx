@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Header from './Header';
+import './Welcome.css';
 
 const Welcome = () => {
   return (
-    <div>Welcome</div>
+    <div>
+      <Header />
+      <h1>Welcome back, ____!</h1>
+    </div>
   )
 }
 
