@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavBar from '../components/NavBar';
 import Meme from '../components/Meme';
 import './MemeGenerator.css';
+import '../components/Cards.css'
+import Cards from '../components/Cards';
 
 const MemeGenerator = () => {
   
@@ -13,6 +15,7 @@ const MemeGenerator = () => {
         pic='meme-logo'
       />
       <Meme />
+      <Cards />
     </div>
   )
 };
