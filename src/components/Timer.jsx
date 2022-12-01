@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Count from './Count';
 import './Timer.css';
 
 const Timer = () => {
@@ -16,6 +17,7 @@ const Timer = () => {
       </div>
       <div className='timer--count'>
         <h1>{count}</h1>
+        <Count />
       </div>
       <div onClick={() => handleClick('plus')} className='timer--counter-container plus'>
         <i className="fa-solid fa-plus timer--counter"></i>
