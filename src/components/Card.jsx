@@ -1,4 +1,5 @@
 import React from 'react';
+import Star from './Star';
 
 const Card = ( props ) => {
   let badgeText;
@@ -42,11 +43,7 @@ const Card = ( props ) => {
         </p>
         <p> / person</p>
       </div>
-      {
-        card.favourite ? 
-        <i className="fa-solid fa-star rating-favourite" onClick={handleClick}></i> :
-        <i className="fa-regular fa-star rating-favourite" onClick={handleClick}></i>
-      }
+      <Star favourite={card.favourite} handleClick={handleClick}/>
     </div>
   )
 }
