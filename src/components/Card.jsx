@@ -29,6 +29,11 @@ const Card = ( props ) => {
         </p>
         <p> / person</p>
       </div>
+      {
+        props.favourite ? 
+        <i className="fa-solid fa-star rating-favourite"></i> :
+        <i className="fa-regular fa-star rating-favourite"></i>
+      }
     </div>
   )
 }
