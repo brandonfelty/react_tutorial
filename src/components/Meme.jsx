@@ -4,12 +4,17 @@ import { memeData } from '../dummyData';
 
 const Meme = () => {
   const memes = memeData.data.memes;
-  const [ randomMeme, setRandomMeme ] = useState({});
+  const [ allMemeImages, setAllMemeImages ] = useState([...memes]);
+  const [ randomMeme, setRandomMeme ] = useState({
+    topText: '',
+    bottomText: '',
+    url: 'https://i.imgflip.com/30b1gx.jpg',
+  });
 
   const getRandomMeme = () => {
-    const numberOfMemes = memes.length;
+    const numberOfMemes = allMemeImages.length;
     const randomMemeID = Math.floor(Math.random() * numberOfMemes);
-    return memes[randomMemeID];
+    return allMemeImages[randomMemeID];
   };
 
   const handleClick = (e) => {
@@ -21,8 +26,8 @@ const Meme = () => {
     <div className='meme'>
       <form>
         <div className='meme-inputs'>
-          <input placeholder='shut up'></input>
-          <input placeholder='and take my money'></input>
+          <input placeholder='top text'></input>
+          <input placeholder='bottom text'></input>
         </div>
         <button 
           type='submit'
