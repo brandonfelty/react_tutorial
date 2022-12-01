@@ -10,7 +10,7 @@ export const boxData = [
   },
   {
     id: 2,
-    on: true,
+    on: false,
   },
   {
     id: 3,
@@ -18,7 +18,7 @@ export const boxData = [
   },
   {
     id: 4,
-    on: true,
+    on: false,
   },
   {
     id: 5,
@@ -26,7 +26,7 @@ export const boxData = [
   },
   {
     id: 6,
-    on: true,
+    on: false,
   },
   {
     id: 7,
@@ -34,7 +34,7 @@ export const boxData = [
   },
   {
     id: 8,
-    on: true,
+    on: false,
   },
   {
     id: 9,
@@ -42,7 +42,7 @@ export const boxData = [
   },
   {
     id: 10,
-    on: true,
+    on: false,
   },
 ]
 

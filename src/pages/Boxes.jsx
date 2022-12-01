@@ -1,24 +1,20 @@
 import React from 'react';
 import { boxData } from '../dummyData';
 import './Boxes.css';
+import Box from '../components/Box';
 
 const Boxes = () => {
   const [boxes, setBoxes] = React.useState(boxData);
-  const handleClick = (e) => {
-    console.log(e)
-  }
 
   return (
     <div className='boxes'>
       {
         boxes.map((box) => (
           box.on && 
-          <div 
-            key={box.id} 
-            className='box'
-            onClick={handleClick}
-          >
-          </div>
+          <Box
+            key={box.id}
+            on={box.on} 
+          />
         ))
       }
     </div>
