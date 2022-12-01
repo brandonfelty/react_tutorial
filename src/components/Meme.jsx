@@ -11,15 +11,19 @@ const Meme = () => {
     url: 'https://i.imgflip.com/30b1gx.jpg',
   });
 
-  const getRandomMeme = () => {
+  const getRandomMemeURL = () => {
     const numberOfMemes = allMemeImages.length;
     const randomMemeID = Math.floor(Math.random() * numberOfMemes);
-    return allMemeImages[randomMemeID];
+    return allMemeImages[randomMemeID].url;
   };
 
   const handleClick = (e) => {
     e.preventDefault();
-    setRandomMeme(getRandomMeme());
+    const url = getRandomMemeURL();
+    setRandomMeme((prevMeme) => ({
+      ...prevMeme,
+      url,
+    }));
   };
 
   return (
