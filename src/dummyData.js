@@ -964,7 +964,8 @@ export const expData = [
     title: 'Our lady palm with Andy Zolang',
     cost: 136,
     openSpots: 0,
-    fire: true
+    fire: true,
+    favourite: true,
   },
   {
     img: forest,
@@ -978,6 +979,7 @@ export const expData = [
     cost: 170,
     openSpots: 5,
     fire: false,
+    favourite: false,
   }, {
     img: elk,
     rating:
@@ -989,7 +991,8 @@ export const expData = [
     title: 'Do you elk what I elk?',
     cost: 169,
     openSpots: 0,
-    fire: false
+    fire: false,
+    favourite: true,
   },
 ];
 
