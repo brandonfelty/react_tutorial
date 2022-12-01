@@ -15,10 +15,7 @@ const Timer = () => {
       <div onClick={() => handleClick('minus')} className='timer--counter-container minus'>
         <i className="fa-solid fa-minus timer--counter"></i>
       </div>
-      <div className='timer--count'>
-        <h1>{count}</h1>
-        <Count />
-      </div>
+      <Count count={count} />
       <div onClick={() => handleClick('plus')} className='timer--counter-container plus'>
         <i className="fa-solid fa-plus timer--counter"></i>
       </div>

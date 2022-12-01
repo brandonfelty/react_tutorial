@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Count = () => {
+const Count = ({count}) => {
   return (
-    <div>Count</div>
+    <div className='timer--count'>
+      <h1>{count}</h1>
+    </div>
   )
 }
 
