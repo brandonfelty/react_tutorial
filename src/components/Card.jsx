@@ -10,29 +10,42 @@ const Card = ( props ) => {
     badgeText = '';
   }
 
+  const [card, setCard] = React.useState({
+    ...props
+  });
+
+  const handleClick = () => {
+    setCard((prevCard) => (
+      {
+        ...prevCard,
+        favourite: !prevCard.favourite,
+      }
+    ))
+  };
+
   return (
     <div className='card'>
       <div className='img-container'>
-        {props.fire && <i className="fa-solid fa-fire"></i>}
+        {card.fire && <i className="fa-solid fa-fire"></i>}
         <div className='badge-text'>{badgeText}</div>
-        <img src={props.img} alt='card' className='cover'/>
+        <img src={card.img} alt='card' className='cover'/>
       </div>
       <p className='rating'>
         {props.rating.stars}
         <i className="fa-solid fa-star rating-star"></i>
-        ({props.rating.amount}) - {props.rating.location}
+        ({card.rating.amount}) - {card.rating.location}
       </p>
-      <p>{props.title}</p>
+      <p>{card.title}</p>
       <div className='rate'>
         <p className='cost'>
-          From ${props.cost}&#160;
+          From ${card.cost}&#160;
         </p>
         <p> / person</p>
       </div>
       {
-        props.favourite ? 
-        <i className="fa-solid fa-star rating-favourite"></i> :
-        <i className="fa-regular fa-star rating-favourite"></i>
+        card.favourite ? 
+        <i className="fa-solid fa-star rating-favourite" onClick={handleClick}></i> :
+        <i className="fa-regular fa-star rating-favourite" onClick={handleClick}></i>
       }
     </div>
   )
