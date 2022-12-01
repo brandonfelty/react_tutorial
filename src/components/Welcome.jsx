@@ -3,10 +3,12 @@ import Header from './Header';
 import './Welcome.css';
 
 const Welcome = () => {
+  const [user, setUser] = React.useState('Brandon');
+
   return (
-    <div>
-      <Header />
-      <h1>Welcome back, ____!</h1>
+    <div className='welcome'>
+      <Header user={user} />
+      <h1>Welcome back,{user}!</h1>
     </div>
   )
 }
