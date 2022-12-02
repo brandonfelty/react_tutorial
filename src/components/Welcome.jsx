@@ -3,7 +3,7 @@ import Header from './Header';
 import './Welcome.css';
 
 const Welcome = () => {
-  const [user, setUser] = React.useState('Brandon');
+  const [ user ] = React.useState('Brandon');
 
   return (
     <div className='welcome'>

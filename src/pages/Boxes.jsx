@@ -4,7 +4,7 @@ import './Boxes.css';
 import Box from '../components/Box';
 
 const Boxes = () => {
-  const [boxes, setBoxes] = React.useState(boxData);
+  const [ boxes ] = React.useState(boxData);
 
   return (
     <div className='boxes'>

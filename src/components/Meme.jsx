@@ -4,7 +4,7 @@ import { memeData } from '../dummyData';
 
 const Meme = () => {
   const memes = memeData.data.memes;
-  const [ allMemeImages, setAllMemeImages ] = useState([...memes]);
+  const [ allMemeImages ] = useState([...memes]);
   const [ randomMeme, setRandomMeme ] = useState({
     topText: '',
     bottomText: '',
