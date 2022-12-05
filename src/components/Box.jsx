@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Box = ({ on, toggle }) => {
+const Box = ({ on, toggle, id }) => {
   const styles = {
     backgroundColor: on ? '#222222' : 'none'
   }
@@ -8,7 +8,7 @@ const Box = ({ on, toggle }) => {
     <div
       className='box'
       style={styles}
-      onClick={toggle}
+      onClick={() => toggle(id)}
     >
     </div>
   )
