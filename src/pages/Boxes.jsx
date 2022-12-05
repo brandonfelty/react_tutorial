@@ -6,6 +6,10 @@ import Box from '../components/Box';
 const Boxes = () => {
   const [ boxes ] = React.useState(boxData);
 
+  const toggle = () => {
+    console.log('clicked!')
+  }
+
   return (
     <div className='boxes'>
       {
@@ -13,7 +17,8 @@ const Boxes = () => {
           box.on && 
           <Box
             key={box.id}
-            on={box.on} 
+            on={box.on}
+            toggle={toggle}
           />
         ))
       }
