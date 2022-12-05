@@ -4,10 +4,14 @@ import './Boxes.css';
 import Box from '../components/Box';
 
 const Boxes = () => {
-  const [ boxes ] = React.useState(boxData);
+  const [ boxes, setBoxes ] = React.useState(boxData);
 
   const toggle = (id) => {
-    console.log(id)
+    const updatedBoxes = boxes.map(box => {
+      if (box.id === id) return {id, on: !box.on};
+      return box;
+    })
+    setBoxes(updatedBoxes);
   }
 
   return (

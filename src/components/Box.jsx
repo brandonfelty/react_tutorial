@@ -2,7 +2,7 @@ import React from 'react';
 
 const Box = ({ on, toggle, id }) => {
   const styles = {
-    backgroundColor: on ? '#222222' : 'none'
+    backgroundColor: on ? '#222222' : '#fff'
   }
   return (
     <div
