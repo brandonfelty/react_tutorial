@@ -19,9 +19,8 @@ const Boxes = () => {
         boxes.map((box) => (
           <Box
             key={box.id}
-            id={box.id}
             on={box.on}
-            toggle={toggle}
+            toggle={() => toggle(box.id)}
           />
         ))
       }

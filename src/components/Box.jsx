@@ -8,7 +8,7 @@ const Box = ({ on, toggle, id }) => {
     <div
       className='box'
       style={styles}
-      onClick={() => toggle(id)}
+      onClick={toggle}
     >
     </div>
   )
