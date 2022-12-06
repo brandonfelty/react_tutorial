@@ -1041,23 +1041,23 @@ export const expData = [
 
 export const jokeData = [
   {
-    setup: 'setup1',
-    punchline: 'punchline1'
+    setup: 'A ham sandwich walks into a bar and orders a beer.',
+    punchline: 'The bartender says sorry we dont serve food here.'
   },
   {
-    setup: 'setup2',
-    punchline: 'punchline2'
+    setup: 'Why did the scarecrow win an award?',
+    punchline: 'He was outstanding in his field.'
   },
   {
-    setup: 'setup3',
-    punchline: 'punchline3'
+    setup: 'Whats brown and sticky.',
+    punchline: 'A stick.'
   },
   {
-    setup: 'setup4',
-    punchline: 'punchline4'
+    setup: 'Why are there gates around cemetaries?',
+    punchline: 'People are dying to get in.'
   },
   {
-    setup: 'setup5',
-    punchline: 'punchline5'
+    setup: 'Why cant your nose be 12 inches long?',
+    punchline: 'Because then it would be a foot.'
   },
 ];
