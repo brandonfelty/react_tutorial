@@ -8,8 +8,7 @@ const Boxes = () => {
 
   const toggle = (id) => {
     const updatedBoxes = boxes.map(box => {
-      if (box.id === id) return {id, on: !box.on};
-      return box;
+      return box.id === id ? {id, on: !box.on} : box;
     })
     setBoxes(updatedBoxes);
   }
