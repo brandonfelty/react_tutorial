@@ -1,0 +1,12 @@
+.jokes--container {
+  padding: 3rem;
+  margin: 1rem;
+  border: 0.2rem dashed green;
+  background-color: rgb(86, 86, 86);
+}
+
+.joke {
+  border: 1px solid #000000;
+  background-color: rgb(197, 197, 197);
+  padding: 1rem;
+}
