@@ -8,11 +8,12 @@ const Joke = (props) => {
     setIsShown(prev => !prev);
   };
 
-
   return (
     <div className='joke'>
       <h1>Setup: {props.setup}</h1>
-      <button onClick={toggleShown} >Show PunchLine</button>
+      <button onClick={toggleShown}>
+        {isShown ? 'Hide' : 'Show'} PunchLine
+      </button>
       { isShown && <h3>PunchLine: {props.punchline}</h3> }
     </div>
   )
