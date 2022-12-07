@@ -16,7 +16,7 @@ const Boxes = () => {
 
   return (
     <div className='boxes'>
-      <h1>You have _ unread messages</h1>
+      {messages.length && <h1>You have {messages.length} unread messages</h1>}
       {
         boxes.map((box) => (
           <Box
