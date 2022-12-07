@@ -5,7 +5,7 @@ import Box from '../components/Box';
 
 const Boxes = () => {
   const [ boxes, setBoxes ] = React.useState(boxData);
-  const [ messages, setMessages ] = useState([])
+  const [ messages, setMessages ] = useState(['a', 'b'])
 
   const toggle = (id) => {
     const updatedBoxes = boxes.map(box => {
@@ -16,9 +16,15 @@ const Boxes = () => {
 
   return (
     <div className='boxes'>
-      {messages.length > 1 && <h1>You have {messages.length} unread messages</h1>}
-      {messages.length === 1 && <h1>You have one unread message</h1>}
-      {messages.length === 0 && <h1>You have no messages</h1>}
+      {
+        messages.length === 0 ? 
+        <h1>You're all caught up</h1> :
+        <h1>You have {messages.length} unread  
+        {
+          messages.length === 1 ? ' message' : ' messages'
+        }
+        </h1>
+      }
 
       {
         boxes.map((box) => (
