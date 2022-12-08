@@ -2,7 +2,12 @@ import React from 'react'
 
 function Form() {
   return (
-    <div>Form</div>
+    <form>
+      <input
+        type="text"
+        placeholder='First Name'
+      />
+    </form>
   )
 }
 
