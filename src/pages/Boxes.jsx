@@ -5,7 +5,7 @@ import Box from '../components/Box';
 
 const Boxes = () => {
   const [ boxes, setBoxes ] = React.useState(boxData);
-  const [ messages, setMessages ] = useState(['a', 'b'])
+  const [ messages ] = useState(['a', 'b'])
 
   const toggle = (id) => {
     const updatedBoxes = boxes.map(box => {
