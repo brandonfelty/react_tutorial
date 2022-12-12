@@ -1,22 +1,15 @@
 import React, { useState } from 'react'
 
 function Form() {
-  const [ name, setName ] = useState({firstName: '', lastName: ''});
+  const [ formData, setFormData ] = useState(
+    { firstName: '', lastName: '' }
+  );
 
   const handleChange = (e) => {
-    const inputBox = e.target.placeholder;
-    const name = e.target.value;
-    console.log(inputBox, name)
-    switch (inputBox) {
-      case 'First Name':
-        setName(prevName => ({...prevName, firstName: name}));
-        break;
-      case 'Last Name':
-        setName(prevName => ({...prevName, lastName: name}));
-        break;
-      default:
-        console.log(inputBox)
-    }
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [e.target.name]: e.target.value
+    }))
   }
 
   return (
@@ -25,11 +18,13 @@ function Form() {
         type="text"
         placeholder='First Name'
         onChange={handleChange}
+        name='firstName'
       />
       <input
         type="text"
         placeholder='Last Name'
         onChange={handleChange}
+        name='lastName'
       />
     </form>
   )
