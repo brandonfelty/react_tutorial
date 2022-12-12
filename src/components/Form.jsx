@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 
 function Form() {
-  const [ firstName, setFirstName ] = useState('');
-  const [ lastName, setLastName ] = useState('');
+  const [ name, setName ] = useState({firstName: '', lastName: ''});
 
   const handleChange = (e) => {
     const inputBox = e.target.placeholder;
+    const name = e.target.value;
+    console.log(inputBox, name)
     switch (inputBox) {
       case 'First Name':
-        setFirstName(e.target.value);
+        setName(prevName => ({...prevName, firstName: name}));
         break;
       case 'Last Name':
-        setLastName(e.target.value);
+        setName(prevName => ({...prevName, lastName: name}));
         break;
       default:
         console.log(inputBox)
