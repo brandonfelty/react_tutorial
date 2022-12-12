@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 
 function Form() {
   const [ formData, setFormData ] = useState(
-    { firstName: '', lastName: '' }
+    { 
+      firstName: '', 
+      lastName: '',
+      email: ''
+    }
   );
 
   const handleChange = (e) => {
@@ -25,6 +29,12 @@ function Form() {
         placeholder='Last Name'
         onChange={handleChange}
         name='lastName'
+      />
+      <input
+        type="email"
+        placeholder='Email'
+        onChange={handleChange}
+        name='email'
       />
     </form>
   )
