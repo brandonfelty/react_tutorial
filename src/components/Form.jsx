@@ -7,13 +7,14 @@ function Form() {
       lastName: '',
       email: '',
       comments: '',
-      isFriendly: true
+      isFriendly: true,
+      employment: ''
     }
   );
 
   const handleChange = (event) => {
     const {name, value, type, checked} = event.target;
-    console.log(checked)
+
     setFormData(prevFormData => ({
       ...prevFormData,
       [name]: type === 'checkbox' ? checked : value
@@ -63,18 +64,27 @@ function Form() {
         <input 
           type='radio'
           id='unemployed'
+          name='employment'
+          value='unemployed'
+          onChange={handleChange}
         />
         <label htmlFor='unemployed'>Unemployed</label>
         <br />
         <input 
           type='radio'
           id='part-time'
+          name='employment'
+          value='part-time'
+          onChange={handleChange}
         />
         <label htmlFor='part-time'>Part-time</label>
         <br />
         <input 
           type='radio'
-          id='full-time'full-time
+          id='full-time'
+          name='employment'
+          value='full-time'
+          onChange={handleChange}
         />
         <label htmlFor='full-time'>Full-time</label>
         <br />
