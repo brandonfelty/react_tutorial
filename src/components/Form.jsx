@@ -67,6 +67,7 @@ function Form() {
           name='employment'
           value='unemployed'
           onChange={handleChange}
+          checked={formData.employment === 'unemployed'}
         />
         <label htmlFor='unemployed'>Unemployed</label>
         <br />
@@ -76,6 +77,7 @@ function Form() {
           name='employment'
           value='part-time'
           onChange={handleChange}
+          checked={formData.employment === 'part-time'}
         />
         <label htmlFor='part-time'>Part-time</label>
         <br />
@@ -85,6 +87,7 @@ function Form() {
           name='employment'
           value='full-time'
           onChange={handleChange}
+          checked={formData.employment === 'full-time'}
         />
         <label htmlFor='full-time'>Full-time</label>
         <br />
