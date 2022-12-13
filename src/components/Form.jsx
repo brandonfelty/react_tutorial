@@ -5,7 +5,8 @@ function Form() {
     { 
       firstName: '', 
       lastName: '',
-      email: ''
+      email: '',
+      comments: ''
     }
   );
 
@@ -38,6 +39,12 @@ function Form() {
         onChange={handleChange}
         name='email'
         value={formData.email}
+      />
+      <textarea 
+        placeholder='Enter comments here'
+        onChange={handleChange}
+        name='comments'
+        value={formData.comments}
       />
     </form>
   )
