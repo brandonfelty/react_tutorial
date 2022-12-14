@@ -11,6 +11,7 @@ import Jokes from "./pages/Jokes";
 import TravelJournal from "./pages/TravelJournal";
 import MemeGenerator from "./pages/MemeGenerator";
 import Boxes from "./pages/Boxes";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<ReactFacts />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/info" element={<BusinessCard />} />
           <Route path="/airbnb" element={<AirBNB />} />
           <Route path='/jokes' element={<Jokes />} />
