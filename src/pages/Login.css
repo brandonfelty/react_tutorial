@@ -1,0 +1,23 @@
+.login--container {
+  width: 100%;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login--form {
+  width: 20rem;
+  background-color: whitesmoke;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+#login-form > input {
+  margin-top: 0.75rem;
+}
+
+#joinNewsletter {
+  width: 1rem;
+  margin-top: 1.5rem;
+}
