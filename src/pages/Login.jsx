@@ -9,7 +9,7 @@ const Login = () => {
           <input type='email' placeholder='email'/>
           <input type='password' placeholder='password'/>
           <input type='password' placeholder='Confirm password'/>
-          <div>
+          <div className='login-newsletter'>
             <input type='checkbox' id='joinNewsletter'/>
             <label htmlFor='joinNewsletter'>I want to join the newsletter</label>
           </div>
