@@ -17,10 +17,22 @@ const Login = () => {
     }))
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.password !== formData.passwordConfirm) {
+      console.log('Passwords do not match');
+    } else {
+      if (formData.newsletter) {
+        console.log('Thanks for signing up for our newsletter!  ')
+      }
+      console.log('Successfully signed up');
+    }
+  };
+
   return (
     <div className='login--container'>
       <div className='login--form'>
-        <form id='login-form'>
+        <form id='login-form' onSubmit={handleSubmit} >
           <input 
             type='email'
             placeholder='email'
