@@ -62,7 +62,7 @@ const Login = () => {
               checked={formData.newsletter}
               onChange={handleChange}
             />
-            <label htmlFor='joinNewsletter'>I want to join the newsletter</label>
+            <label htmlFor='joinNewsletter' className='newsletter-label'>I want to join the newsletter</label>
           </div>
           <button className='login--button'>Sign Up</button>
         </form>

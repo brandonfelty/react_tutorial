@@ -19,8 +19,8 @@
   margin-top: 0.75rem;
 }
 
-#login-form > label {
-  margin-left: 1rem;
+.newsletter-label {
+  padding-left: 10px;
 }
 
 .login--button {
