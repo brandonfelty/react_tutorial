@@ -43,10 +43,14 @@ const Meme = () => {
       </form>
       { 
         randomMeme.url && 
-        <img className='meme-image'
-          src={randomMeme.url}
-          alt="Random Meme"
-        />
+        <div className='meme-image--container'>
+          <img className='meme-image'
+            src={randomMeme.url}
+            alt="Random Meme"
+          />
+          <h2 className='meme--text top'>One does not simply</h2>
+          <h2 className='meme--text bottom'>Walk into Mordor</h2>
+        </div>
       }
     </div>
   )

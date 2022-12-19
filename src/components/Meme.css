@@ -12,12 +12,31 @@
   justify-content: center;
 }
 
+.meme-image--container {
+  position: relative;
+}
+
+.meme--text {
+  position: absolute;
+  background-color: #fff;
+  margin-left: 1rem;
+}
+
+.meme--text.top {
+  top: 2rem;
+}
+
+.meme--text.bottom {
+  bottom: 1rem;
+}
+
 .meme-image {
   width: 30rem;
   align-self: center;
   margin-top: 2rem;
   border-radius: 1.5rem;
 }
+
 
 input {
   margin-right: 1rem;
