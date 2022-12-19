@@ -54,7 +54,7 @@ const Login = () => {
             value={formData.passwordConfirm}
             onChange={handleChange}
           />
-          <div className='login-newsletter'>
+          <div className='login--newsletter'>
             <input 
               type='checkbox' 
               id='joinNewsletter'
