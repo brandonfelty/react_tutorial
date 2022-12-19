@@ -14,6 +14,7 @@
 
 .meme-image--container {
   position: relative;
+  width: 100%;
 }
 
 .meme--text {

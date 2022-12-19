@@ -18,26 +18,42 @@ const Meme = () => {
   };
 
   const handleClick = (e) => {
+    const { name, value } = e.target;
+    setRandomMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     const url = getRandomMemeURL();
     setRandomMeme((prevMeme) => ({
       ...prevMeme,
       url,
     }));
-  };
+  }
 
   return (
     <div className='meme'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='meme-inputs'>
-          <input placeholder='top text'></input>
-          <input placeholder='bottom text'></input>
+          <input 
+            placeholder='top text'
+            name='topText'
+            value={randomMeme.topText}
+            onChange={handleClick}>
+          </input>
+          <input 
+            placeholder='bottom text'
+            name='bottomText'
+            value={randomMeme.bottomText}
+            onChange={handleClick}
+          >
+        </input>
         </div>
-        <button 
-          type='submit'
-          onClick={handleClick}
-        >
-        <p>Get a new meme</p>
+        <button>
+          <p>Get a new meme</p>
           <i className="fa-solid fa-image"></i>
         </button>
       </form>
@@ -48,8 +64,8 @@ const Meme = () => {
             src={randomMeme.url}
             alt="Random Meme"
           />
-          <h2 className='meme--text top'>One does not simply</h2>
-          <h2 className='meme--text bottom'>Walk into Mordor</h2>
+          <h2 className='meme--text top'>{randomMeme.topText}</h2>
+          <h2 className='meme--text bottom'>{randomMeme.bottomText}</h2>
         </div>
       }
     </div>
