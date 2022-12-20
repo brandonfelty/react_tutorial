@@ -17,7 +17,7 @@ const Meme = () => {
     return allMemeImages[randomMemeID].url;
   };
 
-  const handleClick = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setRandomMeme((prevMeme) => ({
       ...prevMeme,
@@ -42,13 +42,13 @@ const Meme = () => {
             placeholder='top text'
             name='topText'
             value={randomMeme.topText}
-            onChange={handleClick}>
+            onChange={handleChange}>
           </input>
           <input 
             placeholder='bottom text'
             name='bottomText'
             value={randomMeme.bottomText}
-            onChange={handleClick}
+            onChange={handleChange}
           >
         </input>
         </div>
