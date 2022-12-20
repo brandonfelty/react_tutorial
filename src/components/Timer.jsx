@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Count from './Count';
 import './Timer.css';
 
 const Timer = () => {
   const [ count, setCount ] = useState(0);
 
-  console.log('Component Rendered')
-
   const handleClick = (target) => {
     if (target === 'minus') setCount(prevCount => prevCount - 1);
     if (target === 'plus') setCount(prevCount => prevCount + 1);
   }
-
-  useEffect(() => {
-    console.log("Effect function ran")
-  }, [count])
 
   return (
     <div className='timer--container'>
