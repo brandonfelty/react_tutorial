@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Meme.css';
 
 const Meme = () => {
@@ -9,6 +9,12 @@ const Meme = () => {
     bottomText: '',
     url: '',
   });
+
+  useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+      .then(res => res.json())
+      .then(data => data.success && setAllMemes(data.data.memes))
+  }, []);
 
   const getRandomMemeURL = () => {
     const numberOfMemes = allMemes.length;
