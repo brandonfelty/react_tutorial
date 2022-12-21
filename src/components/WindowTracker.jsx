@@ -14,8 +14,6 @@ const WindowTracker = () => {
     })
   }, []);
 
-  console.log('rendered')
-
   return (
     <div className='windowtracker--container'>
       <button onClick={handleClick}>
