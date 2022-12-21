@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Meme.css';
 
 const Meme = () => {
-  const [ allMemes, setAllMemes ] = useState({});
+  const [ allMemes, setAllMemes ] = useState([]);
 
   const [ randomMeme, setRandomMeme ] = useState({
     topText: '',
