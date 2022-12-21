@@ -5,17 +5,22 @@ const StarWars = () => {
   const [character, setCharacter] = useState(1);
 
   useEffect(() => {
-    console.log('effect ran')
-    fetch('https://swapi.dev/api/people/1')
+    fetch('https://swapi.dev/api/people/' + character)
       .then(res => res.json())
       .then(data => setStarWarsData(data))
-  }, []);
+  }, [character]);
+
+  const handleClick = () => {
+    starWarsData['detail'] === 'Not found' ? 
+      setCharacter(1) :
+      setCharacter(prevCharacter => prevCharacter + 1)
+  }
 
   return (
     <div className='starwars'>
       <h2>Character Number: {character}</h2>
-      <button>Get Next Character</button>
       <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+      <button onClick={handleClick}>Get Next Character</button>
     </div>
   )
 }
