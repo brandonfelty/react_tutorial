@@ -17,7 +17,7 @@ const Boxes = () => {
 
   return (
     <div className='boxes'>
-      <Form />
+      
       {
         messages.length === 0 ? 
         <h1>You're all caught up</h1> :
