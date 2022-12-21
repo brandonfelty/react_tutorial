@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { boxData } from '../dummyData';
 import './Boxes.css';
 import Box from '../components/Box';
-import Form from '../components/Form';
+import WindowTracker from '../components/WindowTracker';
 
 const Boxes = () => {
   const [ boxes, setBoxes ] = React.useState(boxData);
@@ -17,7 +17,7 @@ const Boxes = () => {
 
   return (
     <div className='boxes'>
-      
+      <WindowTracker />
       {
         messages.length === 0 ? 
         <h1>You're all caught up</h1> :
