@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import './Meme.css';
-import { memeData } from '../dummyData';
 
 const Meme = () => {
-  const memes = memeData.data.memes;
-  const [ allMemeImages ] = useState([...memes]);
+  const [ allMemes, setAllMemes ] = useState({});
+
   const [ randomMeme, setRandomMeme ] = useState({
     topText: '',
     bottomText: '',
-    url: 'https://i.imgflip.com/30b1gx.jpg',
+    url: '',
   });
 
   const getRandomMemeURL = () => {
-    const numberOfMemes = allMemeImages.length;
+    const numberOfMemes = allMemes.length;
     const randomMemeID = Math.floor(Math.random() * numberOfMemes);
-    return allMemeImages[randomMemeID].url;
+    return allMemes[randomMemeID].url;
   };
 
   const handleChange = (e) => {
