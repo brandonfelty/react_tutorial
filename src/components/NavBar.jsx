@@ -3,6 +3,7 @@ import reactLogo from '../images/react.png';
 import airbnbLogo from '../images/airbnb.png';
 import MemeLogo from './MemeLogo';
 import './NavBar.css';
+import { FormControlLabel, Switch } from '@mui/material';
 
 const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
@@ -42,8 +43,8 @@ const NavBar = ({ title, subtitle, pic }) => {
       <h3>{title}</h3>
       <div className='navbar-right'>
         <h4>{subtitle}</h4>
-        <a href='/info'> Business Card</a>
-
+        <a href='/info'> Business Card</a> 
+        <FormControlLabel control={<Switch />} label='Dark Mode'/>
       </div>
     </nav>
   )
