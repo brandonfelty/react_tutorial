@@ -40,8 +40,11 @@ const NavBar = ({ title, subtitle, pic }) => {
         </div>
       }
       <h3>{title}</h3>
-      <h4>{subtitle}</h4>
-      <a href='/info'> Business Card</a>
+      <div className='navbar-right'>
+        <h4>{subtitle}</h4>
+        <a href='/info'> Business Card</a>
+
+      </div>
     </nav>
   )
 }
