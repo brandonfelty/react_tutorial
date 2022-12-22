@@ -4,6 +4,12 @@
   color: rgb(0, 0, 0);
 }
 
+.main-container.dark {
+  height: 100vh;
+  background-color: rgb(67, 67, 67);
+  color: rgb(236, 236, 236);
+}
+
 .react-background-logo {
   position: absolute;
   opacity: 0.3;
@@ -14,8 +20,13 @@
 
 .main-title {
   margin-top: 5rem;
-  margin-bottom: 2rem;
   font-size: 2.5rem;
+}
+
+.main-title.dark {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-top: 5rem;
 }
 
 .fact-list > li {
