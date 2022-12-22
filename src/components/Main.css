@@ -1,5 +1,5 @@
 .main-container {
-  padding-left: 20px;
+  padding-left: 2rem;
   height: 100vh;
   color: rgb(0, 0, 0);
 }
@@ -13,17 +13,14 @@
 }
 
 .main-title {
-  margin-top: 0;
-  padding-top: 2rem;
-} 
-
-.fact-list {
-  color: black;
-  z-index: 7;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 .fact-list > li {
-  margin-bottom: 9px;
+  margin-bottom: 1rem;
+  font-size: large;
 }
 
 .fact-list > li::marker {
