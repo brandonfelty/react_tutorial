@@ -5,12 +5,9 @@ import MemeLogo from './MemeLogo';
 import './NavBar.css';
 import { FormControlLabel, Switch } from '@mui/material';
 
-const NavBar = ({ title, subtitle, pic }) => {
+const NavBar = ({ title, subtitle, pic, darkMode }) => {
   let logo = '';
   let navClass = '';
-
-  // hold for darkmode state later
-  let darkMode = true;
 
   if (pic === 'react') {
     logo = reactLogo;
