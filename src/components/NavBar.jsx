@@ -4,8 +4,23 @@ import airbnbLogo from '../images/airbnb.png';
 import MemeLogo from './MemeLogo';
 import './NavBar.css';
 import { FormControlLabel, Switch } from '@mui/material';
+import { alpha, styled } from '@mui/material/styles'
+import { blue } from '@mui/material/colors';
 
-const NavBar = ({ title, subtitle, pic, darkMode }) => {
+const BlueSwitch = styled(Switch)(({ theme }) => ({
+  '& .MuiSwitch-switchBase.Mui-checked': {
+    color: blue[300],
+    '&:hover': {
+      backgroundColor: alpha(blue[300], theme.palette.action.hoverOpacity),
+    },
+  },
+  '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+    backgroundColor: blue[300],
+  },
+}));
+
+
+const NavBar = ({ title, subtitle, pic, darkMode, setDarkMode }) => {
   let logo = '';
   let navClass = '';
 
@@ -27,6 +42,10 @@ const NavBar = ({ title, subtitle, pic, darkMode }) => {
     logoComponent = <MemeLogo />;
   }
 
+  const handleChange = () => {
+    setDarkMode(prevDarkMode => !prevDarkMode)
+  };
+
   return (
     <nav className={navClass}>
       {
@@ -46,8 +65,11 @@ const NavBar = ({ title, subtitle, pic, darkMode }) => {
         <a href='/info' className='business-card'> Business Card</a> 
         <FormControlLabel control=
         {
-          <Switch 
-
+          <BlueSwitch 
+            defaultChecked
+            checked={darkMode}
+            onChange={handleChange}
+            className={`navbar-switch ${darkMode ? 'dark' : ''}`}
           />
         } label='Dark Mode'
           className={`navbar-mode ${darkMode ? 'dark' : ''}`}

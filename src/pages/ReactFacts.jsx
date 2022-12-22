@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from "../components/NavBar";
 import Main from "../components/Main";
 
 const ReactFacts = () => {
-  let darkMode = true;
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <>
@@ -12,6 +12,7 @@ const ReactFacts = () => {
         title='React' 
         subtitle='Lesson 1 - React Facts'
         darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
       <Main 
         darkMode={darkMode}

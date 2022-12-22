@@ -113,3 +113,12 @@ path#path2403 {
 .navbar-mode {
   padding-left: 30%;
 }
+
+.navbar-mode.dark {
+  padding-left: 30%;
+  color: rgb(159, 228, 255);
+}
+
+.navbar-switch.dark {
+  color: rgb(0, 189, 192);
+}
