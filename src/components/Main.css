@@ -1,26 +1,15 @@
 .main-container {
   padding-left: 20px;
-  color: white;
-  background-color: black;
-  opacity: 0.5;
-  height: 100%;
+  height: 100vh;
+  color: rgb(0, 0, 0);
 }
 
-.main-container::after {
-  content: "";
-  background: url('../images/react.png');
-  background-size: 400px;
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position-x: 325px;
-  background-position-y: 30px;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.react-background-logo {
   position: absolute;
-  z-index: -1;   
+  opacity: 0.3;
+  left: 50vw;
+  top: 10rem;
+  z-index: -1;
 }
 
 .main-title {
@@ -28,11 +17,16 @@
   padding-top: 2rem;
 } 
 
+.fact-list {
+  color: black;
+  z-index: 7;
+}
+
 .fact-list > li {
   margin-bottom: 9px;
 }
 
 .fact-list > li::marker {
-  color: aqua;
+  color: rgb(0, 142, 142);
   font-size: 1.4rem;
 }
