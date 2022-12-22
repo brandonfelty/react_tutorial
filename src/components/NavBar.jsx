@@ -9,9 +9,12 @@ const NavBar = ({ title, subtitle, pic }) => {
   let logo = '';
   let navClass = '';
 
+  // hold for darkmode state later
+  let darkMode = true;
+
   if (pic === 'react') {
     logo = reactLogo;
-    navClass = 'nav-home';
+    navClass = `nav-home ${darkMode ? 'dark' : ''}`;
   }
   if (pic === 'airbnb') {
     logo = airbnbLogo;
@@ -40,9 +43,9 @@ const NavBar = ({ title, subtitle, pic }) => {
           {logoComponent}
         </div>
       }
-      <h3 className='navbar-title'>{title}</h3>
-      <div className='navbar-right'>
-        <h4 className='navbar-subtitle'>{subtitle}</h4>
+      <h3 className={`navbar-title ${darkMode ? 'dark' : ''}`}>{title}</h3>
+      <div className={`navbar-right ${darkMode ? 'dark' : ''}`}>
+        <h4 className={`navbar-subtitle ${darkMode ? 'dark' : ''}`}>{subtitle}</h4>
         <a href='/info' className='business-card'> Business Card</a> 
         <FormControlLabel control=
         {
@@ -50,7 +53,7 @@ const NavBar = ({ title, subtitle, pic }) => {
 
           />
         } label='Dark Mode'
-          className='navbar-mode'
+          className={`navbar-mode ${darkMode ? 'dark' : ''}`}
         />
       </div>
     </nav>
