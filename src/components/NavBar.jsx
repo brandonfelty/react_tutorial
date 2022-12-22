@@ -40,11 +40,18 @@ const NavBar = ({ title, subtitle, pic }) => {
           {logoComponent}
         </div>
       }
-      <h3>{title}</h3>
+      <h3 className='navbar-title'>{title}</h3>
       <div className='navbar-right'>
-        <h4>{subtitle}</h4>
-        <a href='/info'> Business Card</a> 
-        <FormControlLabel control={<Switch />} label='Dark Mode'/>
+        <h4 className='navbar-subtitle'>{subtitle}</h4>
+        <a href='/info' className='business-card'> Business Card</a> 
+        <FormControlLabel control=
+        {
+          <Switch 
+
+          />
+        } label='Dark Mode'
+          className='navbar-mode'
+        />
       </div>
     </nav>
   )
