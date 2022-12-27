@@ -6,7 +6,7 @@ const Button = ({ type }) => {
     <form>
       <button 
         formAction={type === 'linkedin' ? 'https://www.linkedin.com/in/brcfelty/' : null}
-        className={type}
+        className={`${type} button-component`}
       >
         {type === 'email' && <i className="fa-solid fa-envelope"></i>} 
         {type === 'linkedin' && <i className="fa-brands fa-linkedin"></i>} 
