@@ -1,4 +1,4 @@
-i {
+.button-icon {
   margin-right: 4px;
 }
 
@@ -12,6 +12,6 @@ i {
   color: rgb(237, 237, 237);
 }
 
-.email i {
+.email .button-icon {
   color: rgba(255, 0, 0, 0.629);
 }
