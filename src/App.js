@@ -12,6 +12,7 @@ import TravelJournal from "./pages/TravelJournal";
 import MemeGenerator from "./pages/MemeGenerator";
 import Boxes from "./pages/Boxes";
 import Login from "./pages/Login";
+import MDEditor from "./pages/MDEditor";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/travel' element={<TravelJournal />} />
           <Route path='/meme_gen' element={<MemeGenerator />} />
           <Route path='/boxes' element={<Boxes />}/>
+          <Route path='/mde' element={<MDEditor />} />
         </Routes>
       </div>
     </Router>
