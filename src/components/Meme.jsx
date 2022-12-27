@@ -57,7 +57,7 @@ const Meme = () => {
           >
         </input>
         </div>
-        <button>
+        <button className='meme-button'>
           <p>Get a new meme</p>
           <i className="fa-solid fa-image"></i>
         </button>
