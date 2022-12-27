@@ -47,7 +47,7 @@ input {
   border-color: rgb(194, 133, 252);
 }
 
-.meme-button {
+.meme--button {
   width: 100%;
   height: 3rem;
   display: flex;
@@ -59,15 +59,15 @@ input {
   font-size: large;
 }
 
-button:hover {
+.meme--button:hover {
   background-color: rgb(192, 191, 191);
 }
 
-form {
+.meme--form {
   width: 100%;
 }
 
-p {
+.meme--button-text {
   margin: 0;
   padding-right: 0.5rem;
 }
