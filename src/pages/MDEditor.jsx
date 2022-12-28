@@ -1,16 +1,20 @@
 import React, { useCallback, useState } from 'react';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
+import NotesBar from '../components/NotesBar';
+
+import './MDEditor.css';
 
 const MDEditor = () => {
-  const [note, setNote] = useState('Write your markdown here..');
+  const [notes, setNotes] = useState([]);
   const onChange = useCallback((value) => {
-    setNote(value);
+    setNotes(value);
   }, []);
 
   return (
-    <div>
-      <SimpleMDE value={note} onChange={onChange} />
+    <div className='mde--container'>
+      <NotesBar notes={notes} />
+      <SimpleMDE value={notes[0]} onChange={onChange} className='mdeditor'/>
     </div>
   )
 };

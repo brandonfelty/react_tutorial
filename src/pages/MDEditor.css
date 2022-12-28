@@ -1,0 +1,8 @@
+.mde--container {
+  position: absolute;
+}
+
+.mdeditor {
+  position: relative;
+  left: 20rem;
+}
