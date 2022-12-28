@@ -11,7 +11,7 @@ const NotesBar = ({ notes }) => {
       </button>
       { notes.map((note, index) => (
         <div className='mde--sidebar-note' key={index}>
-          {note}
+          {`Note ${note.id + 1}`}
         </div>
       ))}
     </div>

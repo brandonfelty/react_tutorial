@@ -5,8 +5,15 @@ import NotesBar from '../components/NotesBar';
 
 import './MDEditor.css';
 
+const dummyNotes = [
+  { "id": 0, "body": 'hi'},
+  { "id": 1, "body": 'hit'},
+  { "id": 2, "body": 'hithe'},
+  { "id": 3, "body": 'hithere'}
+]
+
 const MDEditor = () => {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(dummyNotes);
   const onChange = useCallback((value) => {
     setNotes(value);
   }, []);
@@ -14,7 +21,7 @@ const MDEditor = () => {
   return (
     <div className='mde--container'>
       <NotesBar notes={notes} />
-      <SimpleMDE value={notes[0]} onChange={onChange} className='mdeditor'/>
+      <SimpleMDE value={notes[0].body} onChange={onChange} className='mdeditor'/>
     </div>
   )
 };
