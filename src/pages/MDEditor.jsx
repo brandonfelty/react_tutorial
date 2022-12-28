@@ -14,14 +14,20 @@ const dummyNotes = [
 
 const MDEditor = () => {
   const [notes, setNotes] = useState(dummyNotes);
+  const [activeNote, setActiveNote] = useState(0);
+
   const onChange = useCallback((value) => {
     setNotes(value);
   }, []);
 
   return (
     <div className='mde--container'>
-      <NotesBar notes={notes} />
-      <SimpleMDE value={notes[0].body} onChange={onChange} className='mdeditor'/>
+      <NotesBar 
+        notes={notes} 
+        toggleActiveNote={setActiveNote} 
+        activeNoteId={activeNote}
+      />
+      <SimpleMDE value={notes[activeNote].body} onChange={onChange} className='mdeditor'/>
     </div>
   )
 };

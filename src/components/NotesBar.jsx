@@ -2,7 +2,7 @@ import React from 'react';
 
 import './NotesBar.css';
 
-const NotesBar = ({ notes }) => {
+const NotesBar = ({ notes, toggleActiveNote, activeNoteId }) => {
   return (
     <div className='mde--sidebar'>
       <div className='add-note'>
@@ -12,7 +12,14 @@ const NotesBar = ({ notes }) => {
         </button>
       </div>
       { notes.map((note, index) => (
-        <div className='mde--sidebar-note' key={index}>
+        <div 
+          className=
+          {
+            `mde--sidebar-note ${activeNoteId === note.id ? 'active' : ''}`
+          }
+          key={note.id}
+          onClick={() => toggleActiveNote(note.id)}
+        >
           {`Note ${note.id + 1}`}
         </div>
       ))}
