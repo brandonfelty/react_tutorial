@@ -1,5 +1,39 @@
 .mde--sidebar {
-  position: absolute;
-  width: 20rem;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 10rem;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.mde--sidebar-note {
+  display: block;
+  color: black;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.mde--sidebar-note.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.mde--sidebar-note:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.add-note {
+  display: flex;
+  align-items: center;
+}
+
+.add-icon {
+  margin-left: 1rem;
+}
+
+.mde--sidebar-title {
+  margin-left: 0.5rem;
 }
