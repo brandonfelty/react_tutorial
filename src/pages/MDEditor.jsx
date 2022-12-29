@@ -20,12 +20,22 @@ const MDEditor = () => {
     setNotes(value);
   }, []);
 
+  const createNewNote = () => {
+    const newNote = {
+      id: notes.length,
+      body: "# Type your markdown note's title here"
+    }
+    setNotes(prevNotes => [...prevNotes, newNote]);
+    setActiveNote(newNote.id);
+  };
+
   return (
     <div className='mde--container'>
       <NotesBar 
         notes={notes} 
         toggleActiveNote={setActiveNote} 
         activeNoteId={activeNote}
+        addNote={createNewNote}
       />
       <SimpleMDE value={notes[activeNote].body} onChange={onChange} className='mdeditor'/>
     </div>
