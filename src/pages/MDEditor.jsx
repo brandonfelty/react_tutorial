@@ -6,10 +6,7 @@ import NotesBar from '../components/NotesBar';
 import './MDEditor.css';
 
 const dummyNotes = [
-  { "id": 0, "body": 'hi'},
-  { "id": 1, "body": 'hit'},
-  { "id": 2, "body": 'hithe'},
-  { "id": 3, "body": 'hithere'}
+  { "id": 0, "body": 'hi'}
 ]
 
 const MDEditor = () => {
