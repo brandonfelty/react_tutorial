@@ -3,6 +3,7 @@ import React from 'react';
 import './NotesBar.css';
 
 const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote }) => {
+  console.log(notes)
   return (
     <div className='mde--sidebar'>
       <div className='add-note'>

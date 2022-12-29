@@ -6,7 +6,8 @@ import NotesBar from '../components/NotesBar';
 import './MDEditor.css';
 
 const dummyNotes = [
-  { "id": 0, "body": 'hi'}
+  { "id": 0, "body": 'hi'},
+  { "id": 1, "body": 'hey'}
 ]
 
 const MDEditor = () => {
@@ -14,13 +15,17 @@ const MDEditor = () => {
   const [activeNote, setActiveNote] = useState(0);
 
   const onChange = useCallback((value) => {
-    setNotes(value);
-  }, []);
+    setNotes(prevNotes => prevNotes.map(prevNote => {
+      return prevNote.id === activeNote
+        ? {...prevNote, 'body': value}
+        : prevNote;
+    }));
+  }, [activeNote]);
 
   const createNewNote = () => {
     const newNote = {
-      id: notes.length,
-      body: "# Type your markdown note's title here"
+      "id": notes.length,
+      "body": "# Type your markdown note's title here"
     }
     setNotes(prevNotes => [...prevNotes, newNote]);
     setActiveNote(newNote.id);
