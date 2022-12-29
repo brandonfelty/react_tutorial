@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useMemo } from 'react';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
 import NotesBar from '../components/NotesBar';
@@ -31,6 +31,15 @@ const MDEditor = () => {
     setActiveNote(newNote.id);
   };
 
+  const mdeOptions = useMemo(() => {
+    return {
+      autofocus: true,
+      spellChecker: false,
+      minHeight: '50vh',
+      maxHeight: '80vh',
+    }
+  }, []);
+
   return (
     <div className='mde--container'>
       <NotesBar 
@@ -39,7 +48,12 @@ const MDEditor = () => {
         activeNoteId={activeNote}
         addNote={createNewNote}
       />
-      <SimpleMDE value={notes[activeNote].body} onChange={onChange} className='mdeditor'/>
+      <SimpleMDE 
+        value={notes[activeNote].body} 
+        onChange={onChange} 
+        className='mdeditor'
+        options={mdeOptions}
+      />
     </div>
   )
 };
