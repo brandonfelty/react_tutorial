@@ -2,12 +2,12 @@ import React from 'react';
 
 import './NotesBar.css';
 
-const NotesBar = ({ notes, toggleActiveNote, activeNoteId }) => {
+const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote }) => {
   return (
     <div className='mde--sidebar'>
       <div className='add-note'>
         <h2 className='mde--sidebar-title'>Notes </h2>
-        <button className='add-icon'>
+        <button className='add-icon' onClick={addNote}>
           <i className="fa-solid fa-plus"></i>
         </button>
       </div>
