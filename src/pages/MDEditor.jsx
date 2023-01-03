@@ -22,7 +22,7 @@ const MDEditor = () => {
     }));
   }, [activeNote]);
 
-  const createNewNote = () => {
+  function createNewNote () {
     const newNote = {
       "id": notes.length,
       "body": "# Type your markdown note's title here"
