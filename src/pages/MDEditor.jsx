@@ -6,8 +6,8 @@ import NotesBar from '../components/NotesBar';
 import './MDEditor.css';
 
 const dummyNotes = [
-  { "id": 0, "body": 'hi'},
-  { "id": 1, "body": 'hey'}
+  // { "id": 0, "body": 'hi'},
+  // { "id": 1, "body": 'hey'}
 ]
 
 const MDEditor = () => {
@@ -48,12 +48,15 @@ const MDEditor = () => {
         activeNoteId={activeNote}
         addNote={createNewNote}
       />
-      <SimpleMDE 
-        value={notes[activeNote].body} 
-        onChange={onChange} 
-        className='mdeditor'
-        options={mdeOptions}
-      />
+      {
+        notes.length && 
+        <SimpleMDE 
+          value={notes[activeNote].body} 
+          onChange={onChange} 
+          className='mdeditor'
+          options={mdeOptions}
+        />
+      }
     </div>
   )
 };
