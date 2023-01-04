@@ -111,4 +111,10 @@ export const SplitPaneLeft = (props) => {
   )
 };
 
+export const SplitPaneRight = (props) => {
+  return (
+    <div {...props} className='split-pane-right' />
+  )
+}
+
 export default SplitPane;

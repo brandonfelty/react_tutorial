@@ -49,21 +49,28 @@ const MDEditor = () => {
 
   return (
     <div className='mde--container'>
-      <NotesBar 
-        notes={notes} 
-        toggleActiveNote={setActiveNote} 
-        activeNoteId={activeNote}
-        addNote={createNewNote}
-      />
-      {
-        notes.length && 
-        <SimpleMDE 
-          value={notes[activeNote].body} 
-          onChange={onChange} 
-          className='mdeditor'
-          options={mdeOptions}
-        />
-      }
+      <SplitPane className='split-pane-row'>
+        <SplitPaneLeft>
+          <NotesBar 
+            notes={notes} 
+            toggleActiveNote={setActiveNote} 
+            activeNoteId={activeNote}
+            addNote={createNewNote}
+          />
+        </SplitPaneLeft>
+        <Divider className='separator-col' />
+        <SplitPaneRight>
+          {
+            notes.length && 
+            <SimpleMDE 
+              value={notes[activeNote].body} 
+              onChange={onChange} 
+              className='mdeditor'
+              options={mdeOptions}
+            />
+          }
+        </SplitPaneRight>
+      </SplitPane>
     </div>
   )
 };
