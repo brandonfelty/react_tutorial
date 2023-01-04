@@ -86,4 +86,10 @@ export const SplitPaneTop = (props) => {
   )
 };
 
+export const SplitPaneBottom = (props) => {
+  return (
+    <div {...props} className='split-pane-bottom'></div>
+  )
+};
+
 export default SplitPane;
