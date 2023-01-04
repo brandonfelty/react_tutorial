@@ -30,6 +30,9 @@ const SplitPane = ({ children, ...props }) => {
 
     setClientHeight(clientHeight + e.clientY - yDividerPos.current);
     setClientWidth(clientWidth + e.clientX - xDividerPos.current);
+
+    yDividerPos.current = e.clientY;
+    xDividerPos.current = e.clientX;
   };
 
   useEffect(() => {
@@ -63,7 +66,7 @@ const SplitPane = ({ children, ...props }) => {
 export const Divider = (props) => {
   const { onMouseHoldDown } = useContext(SplitPaneContext);
   return (
-    <div {...props} onMouseHoldDown={onMouseHoldDown} />
+    <div {...props} onMouseDown={onMouseHoldDown} />
   )
 };
 
