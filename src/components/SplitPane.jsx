@@ -67,4 +67,23 @@ export const Divider = (props) => {
   )
 };
 
+export const SplitPaneTop = (props) => {
+  const topRef = createRef();
+  const { clientHeight, setClientHeight } = useContext(SplitPaneContext);
+
+  useEffect(() => {
+    if (!clientHeight) {
+      setClientHeight(topRef.current.clientHeight);
+      return;
+    }
+
+    topRef.current.style.minHeight = clientHeight + "px";
+    topRef.current.style.maxHeight = clientHeight + "px"; 
+  }, [clientHeight]);
+  
+  return (
+    <div {...props} className='split-pane-top' ref={topRef}></div>
+  )
+};
+
 export default SplitPane;
