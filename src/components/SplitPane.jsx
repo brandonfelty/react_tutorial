@@ -23,7 +23,24 @@ const SplitPane = ({ children, ...props }) => {
     xDividerPos.current = null;
   };
 
-  
+  const onMouseHoldMove = (e) => {
+    if (!yDividerPos.current && !xDividerPos.current) {
+      return;
+    }
+
+    setClientHeight(clientHeight + e.clientY - yDividerPos.current);
+    setClientWidth(clientWidth + e.clientX - xDividerPos.current);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mouseup", onMouseHoldUp);
+    document.addEventListener("mousemove", onMouseHoldMove);
+
+    return () => {
+      document.removeEventListener("mouseup", onMouseHoldUp);
+      document.removeEventListener("mousemove", onMouseHoldMove);
+    };
+  });
 
 };
 
