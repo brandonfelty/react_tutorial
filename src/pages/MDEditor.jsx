@@ -2,12 +2,19 @@ import React, { useCallback, useState, useMemo } from 'react';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
 import NotesBar from '../components/NotesBar';
+import SplitPane, {
+  Divider,
+  SplitPaneBottom,
+  SplitPaneLeft,
+  SplitPaneRight,
+  SplitPaneTop
+} from '../components/SplitPane';
 
 import './MDEditor.css';
 
 const dummyNotes = [
-  // { "id": 0, "body": 'hi'},
-  // { "id": 1, "body": 'hey'}
+  { "id": 0, "body": 'hi'},
+  { "id": 1, "body": 'hey'}
 ]
 
 const MDEditor = () => {
