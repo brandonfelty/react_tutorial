@@ -42,6 +42,29 @@ const SplitPane = ({ children, ...props }) => {
     };
   });
 
+  return (
+    <div {...props}>
+      <SplitPaneContext.Provider
+        value={{
+          clientHeight,
+          setClientHeight,
+          clientWidth,
+          setClientWidth,
+          onMouseHoldDown,
+        }}
+      >
+        {children}
+      </SplitPaneContext.Provider>
+    </div>
+  )
+
+};
+
+export const Divider = (props) => {
+  const { onMouseHoldDown } = useContext(SplitPaneContext);
+  return (
+    <div {...props} onMouseHoldDown={onMouseHoldDown} />
+  )
 };
 
 export default SplitPane;
