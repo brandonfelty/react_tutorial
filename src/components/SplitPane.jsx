@@ -92,4 +92,23 @@ export const SplitPaneBottom = (props) => {
   )
 };
 
+export const SplitPaneLeft = (props) => {
+  const topRef = createRef();
+  const { clientWidth, setClientWidth } = useContext(SplitPaneContext);
+
+  useEffect(() => {
+    if (!clientWidth) {
+      setClientWidth(topRef.current.clientWidth / 2);
+      return;
+    }
+
+    topRef.current.style.minWidth = clientWidth + "px";
+    topRef.current.style.maxWidth = clientWidth + "px";
+  }, [clientWidth]);
+
+  return (
+    <div {...props} className='split-pane-left' ref={topRef}/>
+  )
+};
+
 export default SplitPane;
