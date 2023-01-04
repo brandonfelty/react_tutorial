@@ -7,6 +7,8 @@ import React, {
 } from 'react';
 import SplitPaneContext from '../contexts/SplitPaneContext';
 
+// split pane component taken from blog: https://blog.logrocket.com/how-to-create-a-split-pane-component-in-react/
+
 const SplitPane = ({ children, ...props }) => {
   const [clientHeight, setClientHeight] = useState(null);
   const [clientWidth, setClientWidth] = useState(null);

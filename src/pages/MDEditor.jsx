@@ -4,10 +4,8 @@ import 'easymde/dist/easymde.min.css';
 import NotesBar from '../components/NotesBar';
 import SplitPane, {
   Divider,
-  SplitPaneBottom,
   SplitPaneLeft,
   SplitPaneRight,
-  SplitPaneTop
 } from '../components/SplitPane';
 
 import './MDEditor.css';
