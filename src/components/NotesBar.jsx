@@ -19,19 +19,6 @@ const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote }) => {
     </div>
   ));
 
-  const NoNotes = () => {
-    return (
-      <div className='no-notes'>
-      <div className='add-note'>
-        <h2 className='mde--sidebar-title'>Add Your First Note </h2>
-        <button className='add-icon large' onClick={addNote}>
-          <i className="fa-solid fa-plus"></i>
-        </button>
-      </div>
-    </div>
-    )
-  };
-
   return (
     <div className='mde--sidebar'>
       <div className='add-note'>

@@ -1,12 +1,3 @@
-.no-notes {
-  width: 100%;
-  background-color: #f1f1f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
 .mde--sidebar-note {
   display: block;
   color: black;
@@ -37,7 +28,7 @@
   margin-left: 1rem;
 }
 
-.add-icon.large {
+.add-icon-large {
   margin-left: 1rem;
   border-radius: 1rem;
   height: 3rem;
