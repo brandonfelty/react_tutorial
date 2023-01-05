@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo } from 'react';
+import React, { useCallback, useState, useMemo, useEffect } from 'react';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
 import NotesBar from '../components/NotesBar';
@@ -11,13 +11,27 @@ import SplitPane, {
 import './MDEditor.css';
 
 const dummyNotes = [
-  { "id": 0, "body": 'hi'},
-  { "id": 1, "body": 'hey'}
+  // { "id": 0, "body": 'hi'},
+  // { "id": 1, "body": 'hey'}
 ]
 
 const MDEditor = () => {
   const [notes, setNotes] = useState(dummyNotes);
   const [activeNote, setActiveNote] = useState(0);
+
+  const getNotesFromLocalStorage = () => {
+    localStorage.getItem('notes');
+  };
+
+  const storeNotesInLocalStorage = (newNotes) => {
+    localStorage.setItem('notes', newNotes);
+  };
+
+  // useEffect(() => {
+  //  const oldNotes = getNotesFromLocalStorage();
+  //  setNotes(oldNotes ? oldNotes : []);
+  // }, [])
+  
 
   const onChange = useCallback((value) => {
     setNotes(prevNotes => prevNotes.map(prevNote => {
