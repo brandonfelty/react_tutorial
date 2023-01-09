@@ -45,6 +45,7 @@ const MDEditor = () => {
   function createNewNote () {
     const newNote = {
       "id": notes.length,
+      "title": `Note ${notes.length + 1}`,
       "body": "# Type your markdown note's title here"
     }
     setNotes(prevNotes => [...prevNotes, newNote]);

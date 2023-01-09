@@ -15,7 +15,7 @@ const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote }) => {
       key={note.id}
       onClick={() => toggleActiveNote(note.id)}
     >
-      {`Note ${note.id + 1}`}
+      {note.title}
     </div>
   ));
 
