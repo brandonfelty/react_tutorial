@@ -17,22 +17,22 @@ const dummyNotes = [
 ]
 
 const MDEditor = () => {
-  const [notes, setNotes] = useState(dummyNotes);
+  const getNotesFromLocalStorage = () => {
+    const storedNotesString = localStorage.getItem('notes');
+    const storedNotesObj = JSON.parse(storedNotesString);
+    return storedNotesObj;
+  };
+  
+  const [notes, setNotes] = useState(getNotesFromLocalStorage() || []);
   const [activeNote, setActiveNote] = useState(0);
 
-  const getNotesFromLocalStorage = () => {
-    localStorage.getItem('notes');
-  };
-
   const storeNotesInLocalStorage = (newNotes) => {
-    localStorage.setItem('notes', newNotes);
+    localStorage.setItem('notes', JSON.stringify(newNotes));
   };
 
-  // useEffect(() => {
-  //  const oldNotes = getNotesFromLocalStorage();
-  //  setNotes(oldNotes ? oldNotes : []);
-  // }, [])
-  
+  useEffect(() => {
+    storeNotesInLocalStorage(notes);
+  }, [notes])
 
   const onChange = useCallback((value) => {
     setNotes(prevNotes => prevNotes.map(prevNote => {
