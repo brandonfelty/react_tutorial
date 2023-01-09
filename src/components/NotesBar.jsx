@@ -2,7 +2,23 @@ import React from 'react';
 
 import './NotesBar.css';
 
-const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote }) => {
+const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote, editNoteTitle, setEditTitleMode, editTitleMode }) => {
+  const changeEditTitleMode = () => {
+    console.log('should go to edit mode now')
+  };
+
+  const noteTitleElement = (noteId, noteTitle) => {
+    if (editTitleMode && noteId === activeNoteId) {
+      return (
+        <div>Edit Mode</div>
+      )
+    } else {
+      return (
+        <div>{noteTitle}</div>
+      )
+    }
+  }
+
   const notesElement = notes.map((note) => (
     <div 
       className=
@@ -14,8 +30,11 @@ const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote }) => {
       }
       key={note.id}
       onClick={() => toggleActiveNote(note.id)}
+      onDoubleClick={changeEditTitleMode}
     >
-      {note.title}
+    {
+      noteTitleElement(note.id, note.title)
+    }
     </div>
   ));
 

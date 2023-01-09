@@ -25,6 +25,7 @@ const MDEditor = () => {
   
   const [notes, setNotes] = useState(() => getNotesFromLocalStorage() || []);
   const [activeNote, setActiveNote] = useState(0);
+  const [editTitleMode, setEditTitleMode] = useState(null);
 
   const storeNotesInLocalStorage = (newNotes) => {
     localStorage.setItem('notes', JSON.stringify(newNotes));
@@ -52,6 +53,15 @@ const MDEditor = () => {
     setActiveNote(newNote.id);
   };
 
+  const editNoteTitle = (value) => {
+    setNotes(prevNotes => prevNotes.map(prevNote => {
+      return prevNote.id === activeNote
+        ? { ...prevNote, 'title': value}
+        : prevNote;
+    }));
+  };
+
+
   const mdeOptions = useMemo(() => {
     return {
       autofocus: true,
@@ -73,6 +83,9 @@ const MDEditor = () => {
               toggleActiveNote={setActiveNote} 
               activeNoteId={activeNote}
               addNote={createNewNote}
+              editNoteTitle={editNoteTitle}
+              editTitleMode={editTitleMode}
+              setEditTitleMode={setEditTitleMode}
             />
           </SplitPaneLeft>
           <Divider className='separator-col' />
