@@ -53,14 +53,14 @@ const MDEditor = () => {
     setActiveNote(newNote.id);
   };
 
-  const editNoteTitle = (value) => {
+  const editNoteTitle = (e) => {
+    const { name, value } = e.target;
     setNotes(prevNotes => prevNotes.map(prevNote => {
       return prevNote.id === activeNote
-        ? { ...prevNote, 'title': value}
+        ? { ...prevNote, [name]: value}
         : prevNote;
     }));
   };
-
 
   const mdeOptions = useMemo(() => {
     return {

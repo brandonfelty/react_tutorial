@@ -3,14 +3,35 @@ import React from 'react';
 import './NotesBar.css';
 
 const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote, editNoteTitle, setEditTitleMode, editTitleMode }) => {
-  const changeEditTitleMode = () => {
-    console.log('should go to edit mode now')
+
+  const changeEditTitleMode = (noteId) => {
+    setEditTitleMode(noteId);
+  };
+
+  const handleBlur = () => {
+    setEditTitleMode(null);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') setEditTitleMode(null);
   };
 
   const noteTitleElement = (noteId, noteTitle) => {
-    if (editTitleMode && noteId === activeNoteId) {
+    if (editTitleMode === noteId) {
       return (
-        <div>Edit Mode</div>
+        <div>
+          <input 
+            type='text'
+            name='title'
+            value={noteTitle}
+            onChange={editNoteTitle}
+            onBlur={handleBlur}
+            autoFocus
+            onKeyDown={handleKeyDown}
+          />
+          <button onClick={() => changeEditTitleMode(null)}>OK</button>
+          <button onClick={() => changeEditTitleMode(null)}>X</button>
+        </div>
       )
     } else {
       return (
@@ -30,7 +51,7 @@ const NotesBar = ({ notes, toggleActiveNote, activeNoteId, addNote, editNoteTitl
       }
       key={note.id}
       onClick={() => toggleActiveNote(note.id)}
-      onDoubleClick={changeEditTitleMode}
+      onDoubleClick={() => changeEditTitleMode(note.id)}
     >
     {
       noteTitleElement(note.id, note.title)
