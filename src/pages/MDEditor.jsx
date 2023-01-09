@@ -20,10 +20,11 @@ const MDEditor = () => {
   const getNotesFromLocalStorage = () => {
     const storedNotesString = localStorage.getItem('notes');
     const storedNotesObj = JSON.parse(storedNotesString);
+    console.log(storedNotesObj)
     return storedNotesObj;
   };
   
-  const [notes, setNotes] = useState(getNotesFromLocalStorage() || []);
+  const [notes, setNotes] = useState(() => getNotesFromLocalStorage() || []);
   const [activeNote, setActiveNote] = useState(0);
 
   const storeNotesInLocalStorage = (newNotes) => {
